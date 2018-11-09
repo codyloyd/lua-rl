@@ -1,0 +1,41 @@
+ROT=require './lib/rotLove/src/rot'
+require('level')
+require('entity')
+
+GameWorld = {}
+function GameWorld.new(opts)
+  local self = {}
+  self.levels = {}
+  self.currentLevel = 1
+  self.levels[self.currentLevel] = Level.new(opts)
+
+  function self:getCurrentLevel()
+    return self.levels[self.currentLevel], self.currentLevel
+  end
+
+  function self:goDownLevel()
+    if self.levels[self.currentLevel + 1] then
+
+    else
+      self.levels[self.currentLevel+1] = Level.new()
+    end
+
+    self.currentLevel = self.currentLevel + 1
+    return self.currentLevel
+  end
+
+  function self:goUpLevel()
+    if self.currentLevel - 1 < 1 then
+      return
+    end
+
+    self.currentLevel = self.currentLevel - 1
+    return self.currentLevel
+  end
+
+  --create player
+  self.player = Entity.new(Entity.PlayerTemplate)
+  self:getCurrentLevel().addEntityAtRandomPosition(self.player)
+
+  return self
+end
