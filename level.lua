@@ -71,9 +71,21 @@ function Level.new(opts)
     local entity = Entity.new(Entity.FungusTemplate)
     self.addEntityAtRandomPosition(entity)
   end
+  for i=1, 5 do
+    local entity = Entity.new(Entity.MonsterTemplate)
+    self.addEntityAtRandomPosition(entity)
+  end
+  for i=1, 5 do
+    local entity = Entity.new(Entity.BatTemplate)
+    self.addEntityAtRandomPosition(entity)
+  end
   -- add downstairs
   self.downstairs = {}
   self.downstairs.x, self.downstairs.y = self.getRandomFloorPosition()
   self.map.setTile(self.downstairs.x, self.downstairs.y, Tile.stairDownTile)
+  -- add upstairs
+  self.upstairs = {}
+  self.upstairs.x, self.upstairs.y = self.getRandomFloorPosition()
+  self.map.setTile(self.upstairs.x, self.upstairs.y, Tile.stairUpTile)
   return self
 end

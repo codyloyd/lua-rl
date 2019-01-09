@@ -21,6 +21,7 @@ function GameWorld.new(opts)
     end
 
     self.currentLevel = self.currentLevel + 1
+    self.player.x, self.player.y = self:getCurrentLevel().upstairs.x, self:getCurrentLevel().upstairs.y
     return self.currentLevel
   end
 
@@ -30,6 +31,7 @@ function GameWorld.new(opts)
     end
 
     self.currentLevel = self.currentLevel - 1
+    self.player.x, self.player.y = self:getCurrentLevel().downstairs.x, self:getCurrentLevel().downstairs.y
     return self.currentLevel
   end
 

@@ -11,7 +11,7 @@ function love.load()
   screenHeight = 30 
 
   frame=ROT.Display(screenWidth, screenHeight + 1,1,Colors.white,Colors.black)
-  scheduler=ROT.Scheduler.Simple:new()
+  scheduler=ROT.Scheduler.Speed:new()
   engine=ROT.Engine:new(scheduler)
   engine:start()
 

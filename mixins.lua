@@ -123,3 +123,14 @@ function Mixins.FungusActor:act()
     end
   end
 end
+
+Mixins.MonsterActor = {
+  name = 'MonsterActor',
+  groupName = 'Actor'
+}
+
+function Mixins.MonsterActor:act()
+  dx = math.random( -1, 1 )
+  dy = math.random( -1, 1 )
+  self:tryMove(self.x + dx, self.y + dy, self.level)
+end

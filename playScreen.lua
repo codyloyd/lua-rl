@@ -23,12 +23,14 @@ screen.render = function(frame)
   --generate FOV data
   local visibleTiles = {}
   local exploredTiles = level.exploredTiles
+
   local fov = ROT.FOV.Precise:new(function(fov,x,y)
     if map.getTile(x,y) and map.getTile(x,y).blocksLight then
       return false
     end
     return true
   end)
+
   fov:compute(player.x, player.y, 10, function(x,y,r,v)
     local key  =x..','..y
     visibleTiles[key] = true
@@ -61,7 +63,7 @@ screen.render = function(frame)
       end
     end
   end
-  
+
   -- render player
   frame:write(player.char,player.x-(topLeftX-1), player.y-(topLeftY-1), player.fg, player.bg)
 
@@ -102,8 +104,11 @@ screen.keypressed = function(key)
       refresh()
     end
   elseif key==',' and (love.keyboard.isDown("rshift") or love.keyboard.isDown("lshift")) then
-    gameWorld:goUpLevel()
-    refresh()
+    upstairs = gameWorld:getCurrentLevel().upstairs
+    if player.x == upstairs.x and player.y == upstairs.y then
+      gameWorld:goUpLevel()
+      refresh()
+    end
   end
 end
 

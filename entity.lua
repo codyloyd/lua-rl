@@ -13,6 +13,7 @@ Entity.new = function(opts)
   self.x = opts and opts.x or 0
   self.y = opts and opts.y or 0
   self.map = opts and opts.map
+  self.speed = opts and opts.speed or 1000
 
   -- mixin system
   self.attachedMixins = {}
@@ -41,6 +42,9 @@ Entity.new = function(opts)
       return self.attachedMixins[mixin] or self.attachedMixinGroups[mixin]
     end
   end
+
+  function self:getSpeed() return self.speed end
+
   return self
 end
 
@@ -60,5 +64,26 @@ Entity.FungusTemplate = {
   fg = Colors.leaf,
   bg = Colors.black,
   maxHp = 10,
+  speed = 250,
   mixins = {Mixins.FungusActor, Mixins.Destructible}
+}
+
+Entity.MonsterTemplate = {
+  name = 'monster',
+  char = 'M',
+  fg = Colors.ocher,
+  bg = Colors.black,
+  maxHp = 10,
+  speed = 800,
+  mixins = {Mixins.Movable, Mixins.MonsterActor, Mixins.Destructible}
+}
+
+Entity.BatTemplate = {
+  name = 'bat',
+  char = 'b',
+  fg = Colors.cornflower,
+  bg = Colors.black,
+  maxHp = 10,
+  speed = 2000,
+  mixins = {Mixins.Movable, Mixins.MonsterActor, Mixins.Destructible}
 }
