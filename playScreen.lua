@@ -3,10 +3,13 @@ require('gameWorld')
 require('tile')
 require('entity')
 require('colors')
+require('dialog')
 
 local screen = {}
 local gameWorld
 local player
+local subscreen
+
 screen.enter = function()
   print('entered play screen')
   gameWorld = GameWorld.new()
@@ -74,9 +77,29 @@ screen.render = function(frame)
   player:clearMessages()
 
   frame:write(string.format("HP: %d/%d", player.hp, player.maxHp), 1, screenHeight+1)
+
+  --render subscreen
+  if subscreen then
+    subscreen.render()
+  end
 end
 
 screen.keypressed = function(key)
+  --render subscreen keypress highjacks keypress function
+  if subscreen then
+    subscreen:keypressed(key)
+    if key=='return' then 
+      subscreen = nil
+      refresh()
+    end
+    return
+  end
+
+  if key=='q' then
+    subscreen = Dialog.new({text="this is a long bit of text text testing"})
+    refresh()
+  end
+
   if key=='return' then 
     switchScreen(winScreen)
   elseif key=='escape' then

@@ -10,6 +10,10 @@ function love.load()
   screenWidth = 100
   screenHeight = 30 
 
+  love.graphics.setNewFont('font/CP437.ttf', 16)
+  charWidth = love.graphics.getFont():getWidth('e')
+  charHeight = love.graphics.getFont():getHeight('e')
+
   frame=ROT.Display(screenWidth, screenHeight + 1,1,Colors.white,Colors.black)
   scheduler=ROT.Scheduler.Speed:new()
   engine=ROT.Engine:new(scheduler)
@@ -23,6 +27,7 @@ end
 
 function love.draw()
   frame:draw()
+  currentScreen.render(frame)
 end
 
 function love.keypressed(key)
