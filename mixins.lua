@@ -104,14 +104,13 @@ function Sight:canSee(entity)
     return false
   end
 
-  return true
-  -- local found = false
-  -- fov:compute(self.x, self.y, self.sightRadius, function(x,y,r,v) 
-  --   if x == entity.x and y == entity.y then 
-  --     found = true 
-  --   end
-  -- end)
-  -- return found
+  local found = false
+  fov:compute(self.x, self.y, self.sightRadius, function(x,y,r,v)
+    if x == entity.x and y == entity.y then
+      found = true
+    end
+  end)
+  return found
 end
 
 Mixins.Sight = Sight
