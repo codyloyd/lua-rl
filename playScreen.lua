@@ -50,13 +50,13 @@ screen.render = function(frame)
     for y=topLeftY, topLeftY - 1 + screenHeight do
       local tile = map.getTile(x,y)
       local key = x..','..y
-      -- if visibleTiles[key] and tile then
-      if tile then 
-        frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), tile.fg, tile.bg)
+      if visibleTiles[key] and tile then
+        if tile then
+          frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), tile.fg, tile.bg)
+        end
+      elseif exploredTiles[key] then
+        frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), Colors.midnight, Colors.black)
       end
-      -- elseif exploredTiles[key] then
-      --   frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), Colors.midnight, Colors.black)
-      -- end
     end
   end
 
@@ -64,9 +64,9 @@ screen.render = function(frame)
   for _, entity in pairs(level.entities) do
     if entity.x >= topLeftX and entity.y >= topLeftY and entity.x < topLeftX + screenWidth and entity.y < topLeftY + screenHeight then
       local key = entity.x..','..entity.y
-      -- if visibleTiles[key] then
+      if visibleTiles[key] then
         frame:write(entity.char, entity.x-(topLeftX-1), entity.y-(topLeftY-1), entity.fg, entity.bg)
-      -- end
+      end
     end
   end
 
