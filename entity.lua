@@ -74,8 +74,9 @@ Entity.MonsterTemplate = {
   fg = Colors.ocher,
   bg = Colors.black,
   maxHp = 10,
-  speed = 800,
-  mixins = {Mixins.Movable, Mixins.MonsterActor, Mixins.Destructible}
+  speed = 900,
+  sightRadius = 8,
+  mixins = {Mixins.Movable, Mixins.Attacker, Mixins.MonsterActor, Mixins.Destructible, Mixins.Sight}
 }
 
 Entity.BatTemplate = {
@@ -84,6 +85,7 @@ Entity.BatTemplate = {
   fg = Colors.cornflower,
   bg = Colors.black,
   maxHp = 10,
-  speed = 2000,
-  mixins = {Mixins.Movable, Mixins.MonsterActor, Mixins.Destructible}
+  speed = 1600,
+  sightRadius = 10,
+  mixins = {Mixins.Movable, Mixins.Attacker, Mixins.MonsterActor, Mixins.Destructible, Mixins.Sight}
 }

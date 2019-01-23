@@ -36,16 +36,25 @@ function Level.new(opts)
         -- throw error.. oops
     end
     entity.level = self
+    entity.map = self.map
     table.insert(self.entities, entity)
     if entity:hasMixin('Actor') then scheduler:add(entity, true) end
   end
 
   function self.removeEntity(entityToRemove)
+    print("=======this is the remove function=========")
+    print(entityToRemove.char)
+    print("=======this is the remove function=========")
     for i, entity in pairs(self.entities) do
       if entity == entityToRemove then
         table.remove(self.entities, i)
-        if entity:hasMixin('Actor') then scheduler:remove(entity) end
+        if entity:hasMixin('Actor') then
+          scheduler:remove(entity) 
+        end
       end
+    end
+    for i, v in pairs(self.entities) do
+      print("entity:"..v.char.." x:"..v.x.." y:"..v.y)
     end
   end
 
@@ -67,18 +76,19 @@ function Level.new(opts)
   end
 
   -- add entities to map
-  for i=1, 3 do
-    local entity = Entity.new(Entity.FungusTemplate)
-    self.addEntityAtRandomPosition(entity)
-  end
-  for i=1, 5 do
+  -- for i=1, 3 do
+  --   local entity = Entity.new(Entity.FungusTemplate)
+  --   self.addEntityAtRandomPosition(entity)
+  -- end
+  for i=1, 7 do
     local entity = Entity.new(Entity.MonsterTemplate)
+    entity.char = ""..i
     self.addEntityAtRandomPosition(entity)
   end
-  for i=1, 5 do
-    local entity = Entity.new(Entity.BatTemplate)
-    self.addEntityAtRandomPosition(entity)
-  end
+  -- for i=1, 5 do
+  --   local entity = Entity.new(Entity.BatTemplate)
+  --   self.addEntityAtRandomPosition(entity)
+  -- end
   -- add downstairs
   self.downstairs = {}
   self.downstairs.x, self.downstairs.y = self.getRandomFloorPosition()

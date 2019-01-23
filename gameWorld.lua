@@ -22,6 +22,7 @@ function GameWorld.new(opts)
 
     self.currentLevel = self.currentLevel + 1
     self.player.x, self.player.y = self:getCurrentLevel().upstairs.x, self:getCurrentLevel().upstairs.y
+    self.player.map = self:getCurrentLevel().map
     return self.currentLevel
   end
 
@@ -32,6 +33,7 @@ function GameWorld.new(opts)
 
     self.currentLevel = self.currentLevel - 1
     self.player.x, self.player.y = self:getCurrentLevel().downstairs.x, self:getCurrentLevel().downstairs.y
+    self.player.map = self:getCurrentLevel().map
     return self.currentLevel
   end
 

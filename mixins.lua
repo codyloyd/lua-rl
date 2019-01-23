@@ -8,7 +8,7 @@ Mixins.Movable = {
 function Mixins.Movable:tryMove(x,y,level) 
     tile = level.map.getTile(x,y)
     target = level.getEntityAt(x,y)
-    if target then
+    if target and target:hasMixin('Destructible') then
       if self:hasMixin('Attacker') then
         self:attack(target)
       end
@@ -54,6 +54,7 @@ function Attacker:init(opts)
 end
 
 function Attacker:attack(target)
+  if target == self then return end
   if target:hasMixin('Destructible') then
     attack, defense = self.attackValue, target.defenseValue
     damage = math.random(1, math.max(0, attack - defense))
@@ -85,7 +86,37 @@ end
 
 Mixins.MessageRecipient = MessageRecipient
 
---Actors!!
+-- Sight !!
+local Sight = {
+  name = 'Sight'
+}
+
+function Sight:init(opts)
+  self.sightRadius = opts and opts.sightRadius or 5
+end
+
+function Sight:canSee(entity)
+  -- if they're on the same level
+  if entity.map ~= self.map then return false end
+  -- and technically within the SightRadius
+  if math.abs(entity.x - self.x) > self.sightRadius or
+    math.abs(entity.y - self.y) > self.sightRadius then
+    return false
+  end
+
+  return true
+  -- local found = false
+  -- fov:compute(self.x, self.y, self.sightRadius, function(x,y,r,v) 
+  --   if x == entity.x and y == entity.y then 
+  --     found = true 
+  --   end
+  -- end)
+  -- return found
+end
+
+Mixins.Sight = Sight
+
+-- Actors!!
 
 Mixins.PlayerActor = {
   name= 'PlayerActor',
@@ -130,7 +161,27 @@ Mixins.MonsterActor = {
 }
 
 function Mixins.MonsterActor:act()
-  dx = math.random( -1, 1 )
-  dy = math.random( -1, 1 )
-  self:tryMove(self.x + dx, self.y + dy, self.level)
+  local dx = math.random( -1, 1 )
+  local dy = math.random( -1, 1 )
+  if self:canSee(player) then
+    local newX, newY = nil, nil
+    path = ROT.Path.AStar(player.x, player.y, function(x,y)
+      return self.map.getTile(x,y) and self.map.getTile(x,y).isWalkable
+    end)
+    count = 0
+    path:compute(self.x, self.y, function(x,y) 
+      if count == 1 then
+        newX, newY = x, y
+      end
+      count = count + 1
+    end)
+    if newX and newY then
+      self:tryMove(newX, newY, self.level)
+      return
+    end
+  else
+    if dx or dy then
+      self:tryMove(self.x + dx, self.y + dy, self.level)
+    end
+  end
 end

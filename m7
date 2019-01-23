@@ -1,0 +1,5325 @@
+
+-----------------
+x83 y18
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x83 y19
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x84 y19
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y18
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x82 y19
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x82 y18
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x83 y19
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x82 y18
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y17
+dx/dy1  -1
+
+-----------------
+x84 y16
+dx/dy0  0
+
+-----------------
+x85 y15
+dx/dy1  1
+
+-----------------
+x86 y15
+dx/dy0  -1
+
+-----------------
+x87 y14
+dx/dy-1  -1
+
+-----------------
+x88 y13
+dx/dy1  -1
+
+-----------------
+x89 y12
+dx/dy-1  0
+
+-----------------
+x90 y12
+dx/dy0  1
+
+-----------------
+x92 y12
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x91 y12
+dx/dy-1  1
+
+-----------------
+x92 y12
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x92 y12
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x93 y12
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x93 y12
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x94 y12
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x94 y12
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x95 y12
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x96 y12
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x96 y12
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x97 y12
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x97 y12
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x97 y12
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x96 y12
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x95 y12
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x95 y12
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x96 y12
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x95 y13
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x95 y14
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x94 y15
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x93 y14
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x92 y14
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x91 y13
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x90 y14
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x90 y14
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x91 y13
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x92 y12
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x92 y13
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x92 y13
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x93 y13
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x93 y13
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x94 y12
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x93 y13
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x92 y14
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x93 y13
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x94 y13
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x94 y13
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x94 y13
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x95 y13
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x94 y12
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x93 y12
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x93 y12
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x46 y6
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x46 y5
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x47 y4
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x46 y4
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x45 y3
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x44 y3
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x44 y3
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x44 y4
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x43 y3
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x43 y4
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x44 y3
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x45 y4
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x44 y4
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x43 y3
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x42 y4
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x41 y4
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x41 y4
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x41 y4
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x41 y4
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x41 y5
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x40 y6
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x40 y6
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x39 y5
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x39 y6
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x40 y6
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x39 y6
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x38 y5
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x39 y5
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x38 y6
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x38 y6
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x38 y6
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x39 y6
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x39 y7
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x38 y6
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x38 y5
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x38 y5
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x38 y5
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x39 y6
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x40 y7
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x40 y7
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x39 y7
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x40 y6
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x40 y6
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x39 y7
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x38 y8
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x38 y8
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x38 y8
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x39 y7
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x39 y7
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x52 y2
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y2
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x51 y3
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y2
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x53 y2
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x54 y2
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x54 y3
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x53 y2
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x53 y3
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x53 y2
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x54 y3
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x55 y3
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x55 y3
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x55 y3
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x55 y3
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x55 y3
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x54 y3
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x54 y3
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x53 y3
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y2
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x52 y3
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y3
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y3
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x52 y3
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y2
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y2
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x53 y2
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x53 y2
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x52 y3
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y3
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x52 y4
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x51 y4
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x51 y5
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x51 y5
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x51 y4
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x51 y3
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x52 y4
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x52 y4
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x51 y3
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x50 y3
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x50 y3
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x50 y3
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x50 y3
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x49 y3
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x49 y3
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x49 y4
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x49 y3
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x50 y4
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x50 y5
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x49 y4
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x49 y4
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x50 y5
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x49 y5
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x49 y4
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x46 y6
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x47 y7
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x47 y8
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x48 y7
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x47 y6
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x48 y5
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x49 y5
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x48 y5
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x47 y4
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x47 y5
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x46 y4
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x47 y5
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x47 y4
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x47 y4
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x48 y5
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x47 y4
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x48 y4
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x48 y5
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x47 y6
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x48 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x48 y6
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x48 y7
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x49 y8
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x48 y8
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x49 y7
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x50 y6
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x49 y5
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x49 y5
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x49 y6
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x50 y6
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x49 y7
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x49 y7
+HP9
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x48 y8
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x49 y8
+HP9
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x49 y7
+HP9
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x50 y8
+HP9
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x50 y8
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x51 y8
+HP9
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x51 y8
+HP9
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x51 y8
+HP9
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x52 y9
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x53 y8
+HP9
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y7
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x53 y7
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x54 y7
+HP9
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x53 y6
+HP9
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x53 y6
+HP8
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x54 y5
+HP8
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x53 y4
+HP8
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x53 y5
+HP8
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x54 y4
+HP8
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x54 y3
+HP8
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x53 y4
+HP8
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x53 y4
+HP8
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x52 y5
+HP8
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y4
+HP8
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x52 y4
+HP8
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x60 y5
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x60 y5
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x60 y5
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x61 y4
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x61 y4
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x60 y4
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x60 y4
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x59 y3
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x60 y2
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+TAKING DAMAGE FROM 7i moved!!
+
+-----------------
+x60 y2
+HP10
+dx/dy0  0
+trying move...
+
+-----------------
+x60 y2
+HP9
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x61 y3
+HP9
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x61 y2
+HP9
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x61 y2
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x61 y2
+HP9
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x60 y2
+HP9
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x60 y3
+HP9
+dx/dy-1  1
+trying move...
+i moved!!
+
+TAKING DAMAGE FROM 7i moved!!
+
+-----------------
+x59 y4
+HP9
+dx/dy0  0
+trying move...
+
+-----------------
+x59 y4
+HP8
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x58 y3
+HP8
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x59 y3
+HP8
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x58 y2
+HP8
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x58 y3
+HP8
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x58 y4
+HP8
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x59 y4
+HP8
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x59 y5
+HP8
+dx/dy1  1
+trying move...
+i moved!!
+
+TAKING DAMAGE FROM 7i moved!!
+
+-----------------
+x59 y5
+HP8
+dx/dy0  0
+trying move...
+
+-----------------
+x59 y5
+HP7
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x60 y5
+HP7
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x59 y4
+HP7
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x58 y4
+HP7
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x58 y3
+HP7
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x57 y4
+HP7
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x56 y4
+HP7
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x56 y3
+HP7
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x55 y4
+HP7
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x54 y4
+HP7
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x55 y4
+HP7
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x55 y3
+HP7
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x54 y4
+HP7
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x55 y3
+HP7
+dx/dy0  -1
+trying move...
+i moved!!
+
+TAKING DAMAGE FROM 7i moved!!
+
+-----------------
+x55 y3
+HP7
+dx/dy0  0
+trying move...
+
+-----------------
+x55 y3
+HP6
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x55 y4
+HP6
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x55 y5
+HP6
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x56 y5
+HP6
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x55 y4
+HP6
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x56 y4
+HP6
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x57 y4
+HP6
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x56 y3
+HP6
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x55 y4
+HP6
+dx/dy-1  0
+trying move...
+i moved!!
+
+TAKING DAMAGE FROM 7i moved!!
+
+-----------------
+x54 y4
+HP6
+dx/dy0  0
+trying move...
+
+-----------------
+x54 y4
+HP5
+dx/dy-1  1
+trying move...
+i moved!!
+
+TAKING DAMAGE FROM 7i moved!!
+
+-----------------
+x53 y5
+HP5
+dx/dy0  0
+trying move...
+
+TAKING DAMAGE FROM 7i moved!!
+
+-----------------
+x53 y5
+HP4
+dx/dy0  0
+trying move...
+
+-----------------
+x53 y5
+HP3
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y4
+HP3
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y3
+HP3
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x51 y4
+HP3
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x50 y4
+HP3
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x50 y4
+HP3
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x50 y4
+HP3
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x50 y4
+HP3
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x50 y4
+HP3
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x51 y3
+HP3
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x52 y3
+HP3
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x52 y3
+HP3
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x51 y3
+HP3
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x52 y3
+HP3
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x51 y3
+HP3
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x50 y4
+HP3
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x51 y4
+HP3
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x52 y5
+HP3
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x53 y4
+HP3
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x54 y5
+HP3
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x53 y5
+HP3
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x54 y5
+HP3
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x53 y5
+HP3
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x54 y6
+HP3
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x55 y7
+HP3
+dx/dy0  -1
+trying move...
+
+-----------------
+x55 y7
+HP3
+dx/dy0  1
+trying move...
+i moved!!
+
+TAKING DAMAGE FROM 6i moved!!
+
+-----------------
+x55 y8
+HP2
+dx/dy-1  0
+trying move...
+i moved!!
+
+TAKING DAMAGE FROM 7i moved!!
+
+-----------------
+x54 y8
+HP2
+dx/dy0  0
+trying move...
+
+-----------------
+x54 y8
+HP1
+dx/dy-1  0
+trying move...
+i moved!!
+
+TAKING DAMAGE FROM 6i moved!!
+
+-----------------
+x83 y18
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y18
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y18
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y18
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x83 y18
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y18
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x84 y18
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y17
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x84 y16
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x85 y15
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x85 y15
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x86 y16
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x85 y16
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x85 y15
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x86 y15
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x85 y15
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x85 y14
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x84 y14
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x83 y14
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x83 y14
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x83 y14
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x84 y15
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x85 y14
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x86 y14
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x86 y14
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x86 y15
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x85 y14
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x84 y15
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x83 y15
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x84 y15
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x85 y16
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x85 y17
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x84 y16
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x84 y16
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y15
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x84 y16
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x85 y17
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x86 y17
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x86 y17
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x85 y16
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x85 y16
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x84 y15
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x85 y14
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x85 y14
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x85 y14
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x85 y14
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x84 y14
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x84 y14
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y13
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x83 y13
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x83 y13
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x83 y13
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y12
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x83 y12
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y11
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x83 y11
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y10
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y10
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y10
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y9
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x83 y9
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y9
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x84 y9
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x83 y10
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y9
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x83 y10
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x83 y10
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x83 y10
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x83 y11
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x83 y11
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x83 y11
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x83 y10
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x84 y9
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x84 y9
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x83 y9
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x83 y10
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x83 y10
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x82 y10
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x81 y11
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x81 y10
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x81 y11
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x81 y10
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x81 y11
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x81 y11
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x81 y12
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x80 y11
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x80 y11
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x81 y10
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x81 y9
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x81 y8
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x80 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x80 y7
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x79 y8
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x80 y8
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x79 y8
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x80 y7
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x80 y7
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x79 y7
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y7
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y7
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x79 y7
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x78 y8
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x77 y8
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x78 y7
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x77 y8
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y10
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y10
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y10
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y10
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y11
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x76 y11
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y10
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y11
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y11
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y10
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y10
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y10
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x76 y10
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x76 y11
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y10
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y8
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x76 y8
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x76 y8
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y9
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y9
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y10
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x78 y9
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x78 y8
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x79 y8
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x79 y9
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x78 y8
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x78 y9
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y10
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x77 y10
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y9
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y10
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y9
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y10
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x75 y10
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y11
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y11
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y12
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y12
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y11
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y10
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y10
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y9
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y8
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y8
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y8
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x76 y8
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y9
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y10
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y9
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x78 y9
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x78 y10
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x79 y10
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x79 y10
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x78 y10
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x79 y11
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x78 y12
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x79 y12
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x79 y12
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x80 y12
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x80 y12
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x80 y12
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x80 y12
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x80 y12
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x80 y12
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x81 y11
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x80 y10
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x81 y10
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x80 y9
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x80 y9
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x80 y10
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x79 y10
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x78 y11
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y10
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y9
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y9
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x76 y10
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y11
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y12
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y12
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x76 y12
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x76 y12
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y11
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x78 y11
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x78 y10
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y9
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y8
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x79 y8
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x79 y8
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x78 y7
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y8
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x72 y8
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x72 y8
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x73 y8
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x74 y8
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y9
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y10
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x77 y10
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y10
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y12
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y12
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x76 y12
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y12
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x76 y12
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y12
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y12
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y11
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y10
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y9
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x77 y9
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x77 y10
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y11
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x75 y11
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y11
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y10
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y9
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x77 y10
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x77 y10
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y9
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y9
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y8
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y7
+HP10
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x75 y8
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y7
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y8
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x77 y7
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x78 y7
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x78 y7
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x78 y7
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x79 y8
+HP10
+dx/dy-1  1
+
+-----------------
+x80 y9
+HP10
+dx/dy0  1
+
+-----------------
+x81 y10
+HP10
+dx/dy-1  -1
+
+-----------------
+x82 y10
+HP10
+dx/dy1  -1
+
+-----------------
+x83 y11
+HP10
+dx/dy0  0
+
+-----------------
+x83 y12
+HP10
+dx/dy1  -1
+
+-----------------
+x83 y13
+HP10
+dx/dy1  -1
+
+-----------------
+x84 y14
+HP10
+dx/dy0  1
+
+-----------------
+x85 y15
+HP10
+dx/dy1  0
+
+-----------------
+x86 y16
+HP10
+dx/dy0  -1
+
+-----------------
+x87 y16
+HP10
+dx/dy-1  1
+
+-----------------
+x88 y16
+HP10
+dx/dy0  0
+
+-----------------
+x89 y16
+HP10
+dx/dy1  -1
+
+-----------------
+x91 y16
+HP10
+dx/dy1  -1
+
+-----------------
+x90 y16
+HP10
+dx/dy-1  -1
+
+-----------------
+x91 y16
+HP6
+dx/dy-1  1
+
+TAKING DAMAGE FROM @
+TAKING DAMAGE FROM @
+-----------------
+x75 y26
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y27
+HP10
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x75 y27
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x75 y27
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x75 y27
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y27
+HP10
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x76 y27
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x77 y27
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x78 y26
+HP10
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x79 y26
+HP10
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x80 y27
+HP10
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y26
+HP10
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x79 y26
+HP10
+dx/dy1  0
+trying move...
+
+-----------------
+x79 y26
+HP10
+dx/dy1  -1
+trying move...
+i moved!!
+
+TAKING DAMAGE FROM 4i moved!!
+
+-----------------
+x80 y25
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x81 y25
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x82 y24
+HP9
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x81 y25
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x82 y24
+HP9
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x81 y23
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x81 y23
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x81 y23
+HP9
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x81 y23
+HP9
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x82 y24
+HP9
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x81 y25
+HP9
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x81 y25
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x82 y25
+HP9
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x81 y26
+HP9
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x80 y26
+HP9
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y25
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x80 y24
+HP9
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x79 y24
+HP9
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x79 y24
+HP9
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x80 y25
+HP9
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x79 y25
+HP9
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x78 y24
+HP9
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x78 y25
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y24
+HP9
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x79 y24
+HP9
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x78 y24
+HP9
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y25
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x78 y25
+HP9
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x78 y24
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y23
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y23
+HP9
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y23
+HP9
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y23
+HP9
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x78 y24
+HP9
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y23
+HP9
+dx/dy0  0
+trying move...
+i moved!!
+
+-----------------
+x77 y23
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y23
+HP9
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y22
+HP9
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x76 y22
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x77 y21
+HP9
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x76 y20
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x77 y20
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x78 y19
+HP9
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y20
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x78 y20
+HP9
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y21
+HP9
+dx/dy-1  1
+trying move...
+i moved!!
+
+-----------------
+x76 y22
+HP9
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x77 y23
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x78 y23
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x79 y23
+HP9
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x80 y24
+HP9
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y23
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y23
+HP9
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x80 y24
+HP9
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y23
+HP9
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y23
+HP9
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x79 y24
+HP9
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x79 y23
+HP9
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x80 y24
+HP9
+dx/dy1  1
+trying move...
+i moved!!
+
+-----------------
+x81 y25
+HP9
+dx/dy1  0
+trying move...
+i moved!!
+
+-----------------
+x82 y25
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x82 y25
+HP9
+dx/dy1  -1
+trying move...
+i moved!!
+
+-----------------
+x82 y25
+HP9
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x82 y26
+HP9
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x82 y27
+HP9
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x82 y26
+HP9
+dx/dy0  -1
+trying move...
+i moved!!
+
+-----------------
+x82 y25
+HP9
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x81 y25
+HP9
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x81 y26
+HP9
+dx/dy-1  -1
+trying move...
+i moved!!
+
+-----------------
+x80 y25
+HP9
+dx/dy0  1
+trying move...
+i moved!!
+
+-----------------
+x80 y26
+HP9
+dx/dy-1  0
+trying move...
+i moved!!
+
+-----------------
+x79 y26
+HP9
+dx/dy0  0
+trying move...
+i moved!!

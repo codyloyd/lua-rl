@@ -7,8 +7,9 @@ require('dialog')
 
 local screen = {}
 local gameWorld
-local player
 local subscreen
+player = nil
+noFOV = false
 
 screen.enter = function()
   print('entered play screen')
@@ -27,14 +28,14 @@ screen.render = function(frame)
   local visibleTiles = {}
   local exploredTiles = level.exploredTiles
 
-  local fov = ROT.FOV.Precise:new(function(fov,x,y)
+  fov = ROT.FOV.Precise:new(function(fov,x,y)
     if map.getTile(x,y) and map.getTile(x,y).blocksLight then
       return false
     end
     return true
   end)
 
-  fov:compute(player.x, player.y, 10, function(x,y,r,v)
+  fov:compute(player.x, player.y, 100, function(x,y,r,v)
     local key  =x..','..y
     visibleTiles[key] = true
     exploredTiles[key] = true
@@ -49,11 +50,13 @@ screen.render = function(frame)
     for y=topLeftY, topLeftY - 1 + screenHeight do
       local tile = map.getTile(x,y)
       local key = x..','..y
-      if visibleTiles[key] then
+      -- if visibleTiles[key] and tile then
+      if tile then 
         frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), tile.fg, tile.bg)
-      elseif exploredTiles[key] then
-        frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), Colors.midnight, Colors.black)
       end
+      -- elseif exploredTiles[key] then
+      --   frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), Colors.midnight, Colors.black)
+      -- end
     end
   end
 
@@ -61,9 +64,9 @@ screen.render = function(frame)
   for _, entity in pairs(level.entities) do
     if entity.x >= topLeftX and entity.y >= topLeftY and entity.x < topLeftX + screenWidth and entity.y < topLeftY + screenHeight then
       local key = entity.x..','..entity.y
-      if visibleTiles[key] then
+      -- if visibleTiles[key] then
         frame:write(entity.char, entity.x-(topLeftX-1), entity.y-(topLeftY-1), entity.fg, entity.bg)
-      end
+      -- end
     end
   end
 
@@ -80,7 +83,7 @@ screen.render = function(frame)
 
   --render subscreen
   if subscreen then
-    subscreen.render()
+    subscreen:render()
   end
 end
 
@@ -96,8 +99,6 @@ screen.keypressed = function(key)
   end
 
   if key=='q' then
-    subscreen = Dialog.new({text="this is a long bit of text text testing"})
-    refresh()
   end
 
   if key=='return' then 
