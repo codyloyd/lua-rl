@@ -42,9 +42,6 @@ function Level.new(opts)
   end
 
   function self.removeEntity(entityToRemove)
-    print("=======this is the remove function=========")
-    print(entityToRemove.char)
-    print("=======this is the remove function=========")
     for i, entity in pairs(self.entities) do
       if entity == entityToRemove then
         table.remove(self.entities, i)
@@ -52,9 +49,6 @@ function Level.new(opts)
           scheduler:remove(entity) 
         end
       end
-    end
-    for i, v in pairs(self.entities) do
-      print("entity:"..v.char.." x:"..v.x.." y:"..v.y)
     end
   end
 

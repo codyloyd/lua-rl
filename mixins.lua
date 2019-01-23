@@ -166,10 +166,18 @@ function Mixins.MonsterActor:act()
   if self:canSee(player) then
     local newX, newY = nil, nil
     path = ROT.Path.AStar(player.x, player.y, function(x,y)
+
+      local entity = self.level.getEntityAt(x,y)
+      if entity and entity ~= player and entity ~= self then
+        return false
+      end
+
       return self.map.getTile(x,y) and self.map.getTile(x,y).isWalkable
+
     end)
-    count = 0
-    path:compute(self.x, self.y, function(x,y) 
+
+    local count = 0
+    path:compute(self.x, self.y, function(x,y)
       if count == 1 then
         newX, newY = x, y
       end
