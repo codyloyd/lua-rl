@@ -1,3 +1,5 @@
+ROT=require './lib/rotLove/src/rot'
+
 Map = {}
 Map.new = function(opts)
   local self = {}

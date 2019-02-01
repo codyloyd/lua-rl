@@ -1,11 +1,13 @@
 require('tile')
 require('map')
 require('entity')
+require('item')
 
 Level = {}
 function Level.new(opts)
   local self = {}
   self.entities = {}
+  self.items = {}
   self.map = Map.new()
   self.exploredTiles = {}
 
@@ -52,6 +54,19 @@ function Level.new(opts)
     end
   end
 
+  function self.addItem(item, x, y)
+    if self.isEmptyFloor(x, y) then
+      self.items[x..','..y] = item
+      return true
+    end
+    return false
+  end
+
+  function self.addItemAtRandomPosition(item)
+    local x, y = self.getRandomFloorPosition()
+    self.addItem(item, x, y)
+  end
+
   function self.isEmptyFloor(x, y)
     return self.map.getTile(x, y) and self.map.getTile(x,y).name == 'floorTile' and not self.getEntityAt(x,y)
   end
@@ -81,6 +96,11 @@ function Level.new(opts)
   for i=1, 5 do
     local entity = Entity.new(Entity.BatTemplate)
     self.addEntityAtRandomPosition(entity)
+  end
+    -- add Items
+  for i=1, 9 do
+    local item = Item.new(Item.AppleTemplate)
+    self.addItemAtRandomPosition(item)
   end
   -- add downstairs
   self.downstairs = {}

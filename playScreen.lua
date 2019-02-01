@@ -60,6 +60,17 @@ screen.render = function(frame)
     end
   end
 
+  --render items
+  for coords, item in pairs(level.items) do
+    x,y = tonumber(splitString(coords, ',')[1]), tonumber(splitString(coords, ',')[2])
+    if x >= topLeftX and y >= topLeftY and x < topLeftX + screenWidth and y < topLeftY + screenHeight then
+      local key = coords
+      if visibleTiles[key] then
+        frame:write(item.char, x-(topLeftX-1), y-(topLeftY-1), item.fg, item.bg)
+      end
+    end
+  end
+
   -- render entities
   for _, entity in pairs(level.entities) do
     if entity.x >= topLeftX and entity.y >= topLeftY and entity.x < topLeftX + screenWidth and entity.y < topLeftY + screenHeight then
