@@ -14,8 +14,8 @@ Tile.new = function(opts)
   return self
 end
 
-Tile.wallTile = Tile.new({name='wallTile',char='#',fg=Colors.earth, blocksLight=true})
-Tile.floorTile = Tile.new({name='floorTile',char='.', fg=Colors.iron, isWalkable=true})
-Tile.stairUpTile = Tile.new({name='stairUpTile',char='<', fg=Colors.peppermint, isWalkable=true})
-Tile.stairDownTile = Tile.new({name='stairDownTile',char='>', fg=Colors.peppermint, isWalkable=true})
+Tile.wallTile = Tile.new({name='wallTile',char='#',fg=Colors.brown, blocksLight=true})
+Tile.floorTile = Tile.new({name='floorTile',char='.', fg=Colors.darkGray, isWalkable=true})
+Tile.stairUpTile = Tile.new({name='stairUpTile',char='<', fg=Colors.white, isWalkable=true})
+Tile.stairDownTile = Tile.new({name='stairDownTile',char='>', fg=Colors.white, isWalkable=true})
 Tile.nullTile = Tile.new()

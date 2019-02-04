@@ -1,5 +1,6 @@
 ROT=require './lib/rotLove/src/rot'
 require('colors')
+require('loadTileset')
 
 function love.load()
   love.keyboard.setKeyRepeat(true)
@@ -10,16 +11,19 @@ function love.load()
   screenWidth = 100
   screenHeight = 30 
 
-  love.graphics.setNewFont('font/CP437.ttf', 16)
+  font = love.graphics.setNewFont('font/CP437.ttf', 16)
   charWidth = love.graphics.getFont():getWidth('e')
   charHeight = love.graphics.getFont():getHeight('e')
 
-  frame=ROT.Display(screenWidth, screenHeight + 1,1,Colors.white,Colors.black)
+  frame=ROT.Display(screenWidth, screenHeight + 1, 1, Colors.white,Colors.black,{highdpi=true})
   scheduler=ROT.Scheduler.Speed:new()
   engine=ROT.Engine:new(scheduler)
   engine:start()
 
   switchScreen(startScreen)
+
+  tiles = {}
+  tiles.Terrain = loadTileset('./img/Terrain.json')
 end
 
 function love.update(dt)

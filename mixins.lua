@@ -115,6 +115,20 @@ end
 
 Mixins.Sight = Sight
 
+local InventoryHolder = {
+  name = 'InentoryHolder'
+}
+
+function InventoryHolder:init(opts)
+  self.inventory = {}
+end
+
+function InventoryHolder:addInventoryItem(item)
+  table.insert(self.inventory, item)
+end
+
+Mixins.InventoryHolder = InventoryHolder
+
 -- Actors!!
 
 Mixins.PlayerActor = {

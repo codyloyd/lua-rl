@@ -22,7 +22,7 @@ Dialog.new = function(opts)
     love.graphics.setColor(Colors.black)
     love.graphics.rectangle('fill', 2 * charWidth, 2 * charHeight, math.min(width, maxWidth), math.min(height, maxHeight))
 
-    love.graphics.setColor(Colors.slate)
+    love.graphics.setColor(Colors.lightGray)
     love.graphics.setLineWidth(4)
     love.graphics.rectangle('line', 2 * charWidth, 2 * charHeight, math.min(width, maxWidth), math.min(height, maxHeight))
 

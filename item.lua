@@ -1,8 +1,10 @@
 require('colors')
-require('mixins')
+require('itemMixins')
 require('glyph')
+local csv = require('lib/lua-csv/lua/csv')
 
 Item = {}
+Item.templates = {}
 Item.new = function(opts)
   self = {}
   local glyph = Glyph.new(opts)
@@ -17,17 +19,20 @@ Item.new = function(opts)
   mixins = opts and opts.mixins
   if mixins then
     for _,mixin in ipairs(mixins) do
-      for key,value in pairs(mixin) do
-        if key ~= 'init' and key ~= 'name' then
-          self[key] = value
+      mixin = itemMixins[mixin]
+      if mixin then
+        for key,value in pairs(mixin) do
+            if key ~= 'init' and key ~= 'name' then
+            self[key] = value
+            end
         end
-      end
-      self.attachedMixins[mixin.name] = true
-      if mixin.groupName then
-        self.attachedMixinGroups[mixin.groupName] = true
-      end
-      if mixin.init then
-        mixin.init(self, opts)
+        self.attachedMixins[mixin.name] = true
+        if mixin.groupName then
+            self.attachedMixinGroups[mixin.groupName] = true
+        end
+        if mixin.init then
+            mixin.init(self, opts)
+        end
       end
     end
   end
@@ -42,8 +47,34 @@ Item.new = function(opts)
   return self
 end
 
-Item.AppleTemplate = {
-  name = "apple",
-  char = '%',
-  fg = Colors.berry
-}
+Item.randomItem = function()
+  local keys = {}
+  for key, value in pairs(Item.templates) do
+    keys[#keys+1] = key --Store keys in another table
+  end
+  index = keys[math.random(1, #keys)]
+  return Item.templates[index]
+end
+
+  -- load items from org file
+local f = csv.open("items.org", {header=true, separator="|"})
+
+for fields in f:lines() do
+  if fields.fg then
+    fields.fg = Colors[fields.fg]
+  end
+  if fields.bg then
+    fields.bg = Colors[fields.bg]
+  end
+  if fields.mixins then
+    fields.mixins = splitString(fields.mixins, ',')
+  end
+
+  if fields.name and string.find(fields.name, "-") then
+
+  else
+    Item.templates[fields.name] = fields
+  end
+end
+
+

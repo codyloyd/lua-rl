@@ -52,10 +52,14 @@ screen.render = function(frame)
       local key = x..','..y
       if visibleTiles[key] and tile then
         if tile then
+          -- local tileMap = {}
+          -- tileMap['#'] = 48
+          -- tileMap['.'] = 22
+          -- love.graphics.draw(tiles.Terrain.image, tiles.Terrain.tiles[tileMap[tile.char]], (x-(topLeftX-1))*16,(y-(topLeftY-1))*24)
           frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), tile.fg, tile.bg)
         end
       elseif exploredTiles[key] then
-        frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), Colors.midnight, Colors.black)
+        frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), Colors.darkBlue, Colors.black)
       end
     end
   end
@@ -102,7 +106,7 @@ screen.keypressed = function(key)
   --render subscreen keypress highjacks keypress function
   if subscreen then
     subscreen:keypressed(key)
-    if key=='return' then 
+    if key=='escape' then
       subscreen = nil
       refresh()
     end
@@ -143,6 +147,70 @@ screen.keypressed = function(key)
     if player.x == upstairs.x and player.y == upstairs.y then
       gameWorld:goUpLevel()
       refresh()
+    end
+  elseif key=='g' then
+    -- pick item up
+    local item = gameWorld:getCurrentLevel().items[player.x..','..player.y]
+    if item then
+      player:addInventoryItem(item)
+      gameWorld:getCurrentLevel().removeItem(item)
+    end
+  elseif key=='i' then
+    -- view inventory
+    local items = player.inventory
+    local selectedItem = 0
+    local longestWordLength = 0
+    local itemCount = 0
+
+    for _, item in pairs(items) do
+      itemCount = itemCount + 1
+      if string.len(item.name) > longestWordLength then
+        longestWordLength = string.len(item.name)
+      end
+    end
+
+    subscreen = Dialog.new({width=math.max((longestWordLength+4), 15)*charWidth, height=(itemCount + 4)*charHeight})
+    function subscreen.renderContent()
+      love.graphics.setColor(Colors.white)
+      love.graphics.print('INVENTORY', 3*charWidth, 3*charHeight)
+      if itemCount == 0 then
+        love.graphics.print('no items!', 3*charWidth, 4.5*charHeight)
+        return
+      end
+
+      love.graphics.setColor(Colors.white)
+      love.graphics.rectangle('fill',3*charWidth-2, 4*charHeight + charHeight * (selectedItem+1), (longestWordLength+2)*charWidth+6, charHeight)
+      for i, item in ipairs(items) do
+        if (i == selectedItem + 1) then
+          love.graphics.setColor(Colors.black)
+        else
+          love.graphics.setColor(item.fg)
+        end
+        love.graphics.print(item.char, 3*charWidth, 4*charHeight + charHeight * i)
+        if (i == selectedItem + 1) then
+          love.graphics.setColor(Colors.black)
+        else
+          love.graphics.setColor(Colors.white)
+        end
+        love.graphics.print(item.name, 5*charWidth, 4*charHeight + charHeight * i)
+      end
+    end
+
+    function subscreen:keypressed(key)
+      if key == 'j' or key=='down' then
+        selectedItem = (selectedItem + 1) % itemCount
+        subscreen:render()
+      elseif key=='k' or key=='up' then
+        selectedItem = (selectedItem - 1) % itemCount
+        subscreen:render()
+      elseif key=='return' then
+        --should _use_ item before removing it lol
+        local item = items[selectedItem + 1]
+        if item and item.apply then
+          item:apply()
+        end
+        table.remove(player.inventory, selectedItem + 1)
+      end
     end
   end
 end

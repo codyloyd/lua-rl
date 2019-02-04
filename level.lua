@@ -62,6 +62,14 @@ function Level.new(opts)
     return false
   end
 
+  function self.removeItem(itemToRemove)
+    for key, item in pairs(self.items) do
+      if item == itemToRemove then
+        self.items[key] = null
+      end
+    end
+  end
+
   function self.addItemAtRandomPosition(item)
     local x, y = self.getRandomFloorPosition()
     self.addItem(item, x, y)
@@ -98,8 +106,8 @@ function Level.new(opts)
     self.addEntityAtRandomPosition(entity)
   end
     -- add Items
-  for i=1, 9 do
-    local item = Item.new(Item.AppleTemplate)
+  for i=1, 19 do
+    local item = Item.new(Item.randomItem())
     self.addItemAtRandomPosition(item)
   end
   -- add downstairs

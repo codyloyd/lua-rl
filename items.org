@@ -1,0 +1,10 @@
+| name          | char | fg         | mixins       |
+|---------------+------+------------+--------------|
+| apple         | %    | red        | genericMixin |
+| food ration   | %    | darkGreen  | genericMixin |
+| health potion | !    | gray       | genericMixin |
+| snickers bar  | !    | orange     |              |
+| shoe          | ]    | yellow     |              |
+| shirt         | ]    | lightBlue  |              |
+| diet coke     | !    | blue       |              |
+| ryan's crocs  | ]    | lightBrown |              |
