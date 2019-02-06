@@ -35,7 +35,7 @@ screen.render = function(frame)
     return true
   end)
 
-  fov:compute(player.x, player.y, 100, function(x,y,r,v)
+  fov:compute(player.x, player.y, 10, function(x,y,r,v)
     local key  =x..','..y
     visibleTiles[key] = true
     exploredTiles[key] = true
@@ -52,14 +52,30 @@ screen.render = function(frame)
       local key = x..','..y
       if visibleTiles[key] and tile then
         if tile then
-          -- local tileMap = {}
-          -- tileMap['#'] = 48
-          -- tileMap['.'] = 22
-          -- love.graphics.draw(tiles.Terrain.image, tiles.Terrain.tiles[tileMap[tile.char]], (x-(topLeftX-1))*16,(y-(topLeftY-1))*24)
-          frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), tile.fg, tile.bg)
+          local id = tile.tileid
+          if tile.bitMaskMap and tile.bitMask then
+            id = tile.bitMaskMap[tile.bitMask]
+          end
+
+          local image = tiles[tile.tileset].image
+          local quad = tiles[tile.tileset].tiles[id]
+          if x == player.x and y == player.y then
+            --do nothing
+          else
+            love.graphics.setColor(tile.fg)
+            love.graphics.draw(image, quad, (x-(topLeftX))*16,(y-(topLeftY))*24)
+          end
         end
       elseif exploredTiles[key] then
-        frame:write(tile.char, x-(topLeftX-1),y-(topLeftY-1), Colors.darkBlue, Colors.black)
+        local id = tile.tileid
+        if tile.bitMaskMap and tile.bitMask then
+          id = tile.bitMaskMap[tile.bitMask]
+        end
+
+        local image = tiles[tile.tileset].image
+        local quad = tiles[tile.tileset].tiles[id]
+        love.graphics.setColor(Colors.darkBlue)
+        love.graphics.draw(image, quad, (x-(topLeftX))*16,(y-(topLeftY))*24)
       end
     end
   end
@@ -80,13 +96,17 @@ screen.render = function(frame)
     if entity.x >= topLeftX and entity.y >= topLeftY and entity.x < topLeftX + screenWidth and entity.y < topLeftY + screenHeight then
       local key = entity.x..','..entity.y
       if visibleTiles[key] then
-        frame:write(entity.char, entity.x-(topLeftX-1), entity.y-(topLeftY-1), entity.fg, entity.bg)
+        local image = tiles[entity.tileset].image
+        local quad = tiles[entity.tileset].tiles[entity.tileid]
+        love.graphics.setColor(entity.fg)
+        love.graphics.draw(image, quad, (entity.x-(topLeftX))*16,(entity.y-(topLeftY))*24)
+        -- frame:write(entity.char, entity.x-(topLeftX-1), entity.y-(topLeftY-1), entity.fg, entity.bg)
       end
     end
   end
 
   -- render player
-  frame:write(player.char,player.x-(topLeftX-1), player.y-(topLeftY-1), player.fg, player.bg)
+  -- frame:write(player.char,player.x-(topLeftX-1), player.y-(topLeftY-1), player.fg, player.bg)
 
   --render messages
   for i, message in ipairs(player.messages) do

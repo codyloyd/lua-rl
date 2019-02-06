@@ -1,6 +1,9 @@
 ROT=require './lib/rotLove/src/rot'
 require('colors')
 require('loadTileset')
+inspect = require('/lib/inspect/inspect')
+
+love.window.setMode(1024,768)
 
 function love.load()
   love.keyboard.setKeyRepeat(true)
@@ -8,8 +11,8 @@ function love.load()
   playScreen = require('playScreen')
   winScreen = require('winScreen')
   loseScreen = require('loseScreen')
-  screenWidth = 100
-  screenHeight = 30 
+  screenWidth = 80
+  screenHeight = 30
 
   font = love.graphics.setNewFont('font/CP437.ttf', 16)
   charWidth = love.graphics.getFont():getWidth('e')
@@ -24,6 +27,10 @@ function love.load()
 
   tiles = {}
   tiles.Terrain = loadTileset('./img/Terrain.json')
+  tiles.Terrain_Objects = loadTileset('./img/Terrain_Objects.json')
+  tiles.Monsters = loadTileset('./img/Monsters.json')
+  tiles.Avatar = loadTileset('./img/Avatar.json')
+  love.window.setMode(screenWidth*16,screenHeight*24)
 end
 
 function love.update(dt)

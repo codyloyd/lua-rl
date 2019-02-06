@@ -35,6 +35,7 @@ Entity.new = function(opts)
       end
     end
   end
+
   self.hasMixin = function(self, mixin) 
     if type(mixin) == 'table' then
       return self.attachedMixins[mixin.name]
@@ -51,6 +52,8 @@ end
 Entity.PlayerTemplate = {
   name = 'You', 
   char = '@',
+  tileset = 'Avatar',
+  tileid = 1,
   fg = Colors.pureWhite,
   bg = Colors.black,
   maxHp = 40,
@@ -61,6 +64,8 @@ Entity.PlayerTemplate = {
 Entity.FungusTemplate = {
   name = 'fungus',
   char = 'F',
+  tileset = 'Terrain_Objects',
+  tileid = 93,
   fg = Colors.green,
   bg = Colors.black,
   maxHp = 10,
@@ -71,6 +76,8 @@ Entity.FungusTemplate = {
 Entity.MonsterTemplate = {
   name = 'monster',
   char = 'M',
+  tileset = 'Monsters',
+  tileid = 273,
   fg = Colors.orange,
   bg = Colors.black,
   maxHp = 10,
@@ -82,6 +89,8 @@ Entity.MonsterTemplate = {
 Entity.BatTemplate = {
   name = 'bat',
   char = 'b',
+  tileset = 'Monsters',
+  tileid = 82,
   fg = Colors.blue,
   bg = Colors.black,
   maxHp = 10,
