@@ -39,7 +39,9 @@ function GameWorld.new(opts)
 
   --create player
   self.player = Entity.new(Entity.PlayerTemplate)
-  self:getCurrentLevel().addEntityAtRandomPosition(self.player)
+  self.player.x, self.player.y = self:getCurrentLevel().getRandomFloorPosition()
+  self.player.map = self:getCurrentLevel().map
+  scheduler:add(self.player, true)
 
   return self
 end

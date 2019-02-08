@@ -1,9 +1,11 @@
 require('colors')
 require('mixins')
 require('glyph')
+local csv = require('lib/lua-csv/lua/csv')
 
 Entity = {}
-Entity.new = function(opts) 
+Entity.templates = {}
+Entity.new = function(opts)
   self = {}
   local glyph = Glyph.new(opts)
   for k,v in pairs(glyph) do
@@ -20,7 +22,8 @@ Entity.new = function(opts)
   self.attachedMixinGroups = {}
   mixins = opts and opts.mixins
   if mixins then
-    for _,mixin in ipairs(mixins) do
+    for _,mixinName in ipairs(mixins) do
+      local mixin = Mixins[mixinName]
       for key,value in pairs(mixin) do
         if key ~= 'init' and key ~= 'name' then
           self[key] = value
@@ -49,6 +52,36 @@ Entity.new = function(opts)
   return self
 end
 
+Entity.randomEntity = function()
+  local keys = {}
+  for key, value in pairs(Entity.templates) do
+    keys[#keys+1] = key --Store keys in another table
+  end
+  index = keys[math.random(1, #keys)]
+  return Entity.templates[index]
+end
+
+  -- load items from org file
+local f = csv.open("entities.org", {header=true, separator="|"})
+
+for fields in f:lines() do
+  if fields.fg then
+    fields.fg = Colors[fields.fg]
+  end
+  if fields.bg then
+    fields.bg = Colors[fields.bg]
+  end
+  if fields.mixins then
+    fields.mixins = splitString(fields.mixins, ',')
+  end
+
+  if fields.name and string.find(fields.name, "-") then
+
+  else
+    Entity.templates[fields.name] = fields
+  end
+end
+
 Entity.PlayerTemplate = {
   name = 'You', 
   char = '@',
@@ -58,7 +91,7 @@ Entity.PlayerTemplate = {
   bg = Colors.black,
   maxHp = 40,
   attackValue = 10,
-  mixins = {Mixins.Movable, Mixins.PlayerActor, Mixins.Destructible, Mixins.Attacker, Mixins.MessageRecipient, Mixins.InventoryHolder}
+  mixins = {"Movable","PlayerActor","Destructible","Attacker","MessageRecipient","InventoryHolder"}
 }
 
 Entity.FungusTemplate = {

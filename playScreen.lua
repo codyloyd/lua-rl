@@ -9,16 +9,13 @@ local screen = {}
 local gameWorld
 local subscreen
 player = nil
-noFOV = false
 
 screen.enter = function()
-  print('entered play screen')
   gameWorld = GameWorld.new()
   player = gameWorld.player
 end
 
 screen.exit = function()
-  print('exited play screen')
 end
 
 screen.render = function(frame)
@@ -59,11 +56,11 @@ screen.render = function(frame)
 
           local image = tiles[tile.tileset].image
           local quad = tiles[tile.tileset].tiles[id]
-          if x == player.x and y == player.y then
+          if x == player.x and y == player.y or level.items[x..','..y] then
             --do nothing
           else
             love.graphics.setColor(tile.fg)
-            love.graphics.draw(image, quad, (x-(topLeftX))*16,(y-(topLeftY))*24)
+            love.graphics.draw(image, quad, (x-(topLeftX))*tilewidth,(y-(topLeftY))*tileheight)
           end
         end
       elseif exploredTiles[key] then
@@ -75,7 +72,7 @@ screen.render = function(frame)
         local image = tiles[tile.tileset].image
         local quad = tiles[tile.tileset].tiles[id]
         love.graphics.setColor(Colors.darkBlue)
-        love.graphics.draw(image, quad, (x-(topLeftX))*16,(y-(topLeftY))*24)
+        love.graphics.draw(image, quad, (x-(topLeftX))*tilewidth,(y-(topLeftY))*tileheight)
       end
     end
   end
@@ -86,7 +83,8 @@ screen.render = function(frame)
     if x >= topLeftX and y >= topLeftY and x < topLeftX + screenWidth and y < topLeftY + screenHeight then
       local key = coords
       if visibleTiles[key] then
-        frame:write(item.char, x-(topLeftX-1), y-(topLeftY-1), item.fg, item.bg)
+        love.graphics.setColor(item.fg)
+        love.graphics.print(item.char, (x-(topLeftX))*tilewidth, (y-(topLeftY))*tileheight, 0,1.5)
       end
     end
   end
@@ -97,9 +95,9 @@ screen.render = function(frame)
       local key = entity.x..','..entity.y
       if visibleTiles[key] then
         local image = tiles[entity.tileset].image
-        local quad = tiles[entity.tileset].tiles[entity.tileid]
+        local quad = tiles[entity.tileset].tiles[tonumber(entity.tileid)]
         love.graphics.setColor(entity.fg)
-        love.graphics.draw(image, quad, (entity.x-(topLeftX))*16,(entity.y-(topLeftY))*24)
+        love.graphics.draw(image, quad, (entity.x-(topLeftX))*tilewidth,(entity.y-(topLeftY))*tileheight)
         -- frame:write(entity.char, entity.x-(topLeftX-1), entity.y-(topLeftY-1), entity.fg, entity.bg)
       end
     end
@@ -107,14 +105,16 @@ screen.render = function(frame)
 
   -- render player
   -- frame:write(player.char,player.x-(topLeftX-1), player.y-(topLeftY-1), player.fg, player.bg)
+  love.graphics.setColor(Colors.pureWhite)
+  love.graphics.print('@', (player.x-(topLeftX))*tilewidth, (player.y-(topLeftY))*tileheight,0,1.5)
 
   --render messages
   for i, message in ipairs(player.messages) do
-    frame:write(message, 1, i)
+    print(message)
   end
-  player:clearMessages()
 
-  frame:write(string.format("HP: %d/%d", player.hp, player.maxHp), 1, screenHeight+1)
+  love.graphics.setColor(Colors.white)
+  love.graphics.print(string.format("HP: %d/%d", player.hp, player.maxHp), 0, (screenHeight-1)*tileheight, 0, 1.5)
 
   --render subscreen
   if subscreen then

@@ -4,6 +4,7 @@ require('loadTileset')
 inspect = require('/lib/inspect/inspect')
 
 love.window.setMode(1024,768)
+love.graphics.setDefaultFilter('nearest', 'nearest')
 
 function love.load()
   love.keyboard.setKeyRepeat(true)
@@ -12,7 +13,9 @@ function love.load()
   winScreen = require('winScreen')
   loseScreen = require('loseScreen')
   screenWidth = 80
-  screenHeight = 30
+  screenHeight = 28
+  tilewidth = 16
+  tileheight = 24
 
   font = love.graphics.setNewFont('font/CP437.ttf', 16)
   charWidth = love.graphics.getFont():getWidth('e')
@@ -30,7 +33,7 @@ function love.load()
   tiles.Terrain_Objects = loadTileset('./img/Terrain_Objects.json')
   tiles.Monsters = loadTileset('./img/Monsters.json')
   tiles.Avatar = loadTileset('./img/Avatar.json')
-  love.window.setMode(screenWidth*16,screenHeight*24)
+  love.window.setMode(screenWidth*tilewidth,screenHeight*tileheight)
 end
 
 function love.update(dt)
@@ -48,6 +51,9 @@ end
 function refresh()
   frame:clear()
   currentScreen.render(frame)
+  if player then
+    player:clearMessages()
+  end
 end
 
 function switchScreen(screen)

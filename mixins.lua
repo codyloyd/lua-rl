@@ -5,9 +5,12 @@ Mixins.Movable = {
   name = 'Movable'
 }
 
-function Mixins.Movable:tryMove(x,y,level) 
+function Mixins.Movable:tryMove(x,y,level)
     tile = level.map.getTile(x,y)
     target = level.getEntityAt(x,y)
+    if player.x == x and player.y == y then
+      target = player
+    end
     if target and target:hasMixin('Destructible') then
       if self:hasMixin('Attacker') then
         self:attack(target)
@@ -38,7 +41,12 @@ function Mixins.Destructible:takeDamage(attacker, damage)
   if self.hp <= 0 then
     sendMessage(attacker, string.format('You kill the %s!', self.name))
     sendMessage(self, string.format('You die at the hands of the %s!', attacker.name))
+    if self == player then
+      -- switch screen LOSERRRR
+      switchScreen(loseScreen)
+    else
     self.level.removeEntity(self)
+    end
   end
 end
 
@@ -99,13 +107,13 @@ function Sight:canSee(entity)
   -- if they're on the same level
   if entity.map ~= self.map then return false end
   -- and technically within the SightRadius
-  if math.abs(entity.x - self.x) > self.sightRadius or
-    math.abs(entity.y - self.y) > self.sightRadius then
+  if math.abs(entity.x - self.x) > tonumber(self.sightRadius) or
+  math.abs(entity.y - self.y) > tonumber(self.sightRadius) then
     return false
   end
 
   local found = false
-  fov:compute(self.x, self.y, self.sightRadius, function(x,y,r,v)
+  fov:compute(self.x, self.y, tonumber(self.sightRadius), function(x,y,r,v)
     if x == entity.x and y == entity.y then
       found = true
     end
@@ -157,7 +165,7 @@ function Mixins.FungusActor:act()
       if xoffset ~= 0 or yoffset ~= 0 then
         local x, y = self.x + xoffset, self.y + yoffset
         if self.level.isEmptyFloor(x, y) then
-          local newFungus = Entity.new(Entity.FungusTemplate)
+          local newFungus = Entity.new(Entity.templates.fungus)
           newFungus.x, newFungus.y = x, y
           self.level.addEntity(newFungus)
           self.growthsRemaining = self.growthsRemaining - 1

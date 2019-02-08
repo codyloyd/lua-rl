@@ -2,11 +2,9 @@
 local screen = {}
 
 screen.enter = function()
-  print('entered screen')
 end
 
 screen.exit = function()
-  print('exited screen')
 end
 
 screen.render = function(frame)
