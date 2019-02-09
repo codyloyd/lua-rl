@@ -111,7 +111,12 @@ screen.render = function(frame)
   --render messages
   for i, message in ipairs(player.messages) do
     print(message)
+    love.graphics.setColor(Colors.white)
+    love.graphics.print('HEY!', 0, 0, 0, 1.5)
   end
+
+  love.graphics.setColor(Colors.white)
+  love.graphics.print('HEY!', 0, 0, 0, 1.5)
 
   love.graphics.setColor(Colors.white)
   love.graphics.print(string.format("HP: %d/%d", player.hp, player.maxHp), 0, (screenHeight-1)*tileheight, 0, 1.5)
