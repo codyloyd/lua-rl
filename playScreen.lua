@@ -77,14 +77,17 @@ screen.render = function(frame)
     end
   end
 
+
   --render items
   for coords, item in pairs(level.items) do
     x,y = tonumber(splitString(coords, ',')[1]), tonumber(splitString(coords, ',')[2])
     if x >= topLeftX and y >= topLeftY and x < topLeftX + screenWidth and y < topLeftY + screenHeight then
       local key = coords
       if visibleTiles[key] then
+        local image = tiles[item.tileset].image
+        local quad = tiles[item.tileset].tiles[tonumber(item.tileid)]
         love.graphics.setColor(item.fg)
-        love.graphics.print(item.char, (x-(topLeftX))*tilewidth, (y-(topLeftY))*tileheight, 0,1.5)
+        love.graphics.draw(image,quad,(x-(topLeftX))*tilewidth, (y-(topLeftY))*tileheight)
       end
     end
   end
@@ -98,25 +101,20 @@ screen.render = function(frame)
         local quad = tiles[entity.tileset].tiles[tonumber(entity.tileid)]
         love.graphics.setColor(entity.fg)
         love.graphics.draw(image, quad, (entity.x-(topLeftX))*tilewidth,(entity.y-(topLeftY))*tileheight)
-        -- frame:write(entity.char, entity.x-(topLeftX-1), entity.y-(topLeftY-1), entity.fg, entity.bg)
       end
     end
   end
 
   -- render player
-  -- frame:write(player.char,player.x-(topLeftX-1), player.y-(topLeftY-1), player.fg, player.bg)
   love.graphics.setColor(Colors.pureWhite)
   love.graphics.print('@', (player.x-(topLeftX))*tilewidth, (player.y-(topLeftY))*tileheight,0,1.5)
 
   --render messages
   for i, message in ipairs(player.messages) do
-    print(message)
     love.graphics.setColor(Colors.white)
-    love.graphics.print('HEY!', 0, 0, 0, 1.5)
+    love.graphics.print(message.text, 0, (i-1)*tileheight, 0, 1.5)
   end
 
-  love.graphics.setColor(Colors.white)
-  love.graphics.print('HEY!', 0, 0, 0, 1.5)
 
   love.graphics.setColor(Colors.white)
   love.graphics.print(string.format("HP: %d/%d", player.hp, player.maxHp), 0, (screenHeight-1)*tileheight, 0, 1.5)
@@ -194,12 +192,14 @@ screen.keypressed = function(key)
       end
     end
 
+    charWidth = charWidth * 1.5
+    charHeight = charHeight * 1
     subscreen = Dialog.new({width=math.max((longestWordLength+4), 15)*charWidth, height=(itemCount + 4)*charHeight})
     function subscreen.renderContent()
       love.graphics.setColor(Colors.white)
-      love.graphics.print('INVENTORY', 3*charWidth, 3*charHeight)
+      love.graphics.print('INVENTORY', 3*charWidth, 3*charHeight, 0, 1.5)
       if itemCount == 0 then
-        love.graphics.print('no items!', 3*charWidth, 4.5*charHeight)
+        love.graphics.print('no items!', 3*charWidth, 4.5*charHeight, 0, 1.5)
         return
       end
 
@@ -211,13 +211,13 @@ screen.keypressed = function(key)
         else
           love.graphics.setColor(item.fg)
         end
-        love.graphics.print(item.char, 3*charWidth, 4*charHeight + charHeight * i)
+        love.graphics.print(item.char, 3*charWidth, 4*charHeight + charHeight * i, 0, 1.5)
         if (i == selectedItem + 1) then
           love.graphics.setColor(Colors.black)
         else
           love.graphics.setColor(Colors.white)
         end
-        love.graphics.print(item.name, 5*charWidth, 4*charHeight + charHeight * i)
+        love.graphics.print(item.name, 5*charWidth, 4*charHeight + charHeight * i, 0, 1.5)
       end
     end
 

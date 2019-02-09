@@ -8,11 +8,8 @@ screen.exit = function()
 end
 
 screen.render = function(frame)
-  for i=1, 10, 1 do
-    bg= {255-(i*20), 255-(i*20), 255-(i*20)}
-    fg= {i*20,i*20,i*20}
-    frame:write('you winnnnnnnn!',1,i,fg,bg)
-  end
+  love.graphics.setColor(Colors.red)
+  love.graphics.print('YOU WIN', 16,24,0,2)
 end
 
 screen.keypressed = function(key)

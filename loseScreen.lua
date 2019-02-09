@@ -8,7 +8,8 @@ screen.exit = function()
 end
 
 screen.render = function(frame)
-  frame:drawText(1,1,"%c{yellow}LOSER")
+  love.graphics.setColor(Colors.red)
+  love.graphics.print('YOU LOSE', 16,24,0,2)
 end
 
 screen.keypressed = function(key)

@@ -8,8 +8,8 @@ screen.exit = function()
 end
 
 screen.render = function(frame)
-  frame:drawText(1,1,"%c{yellow}Love2D Roguelike")
-  frame:drawText(1,2,"Press [Enter] to begin!")
+  love.graphics.setColor(Colors.white)
+  love.graphics.print("LOOK AT ME I'M A ROGUELIKE WRITTEN IN LUA", 16, 24, 0, 2)
 end
 
 screen.keypressed = function(key)

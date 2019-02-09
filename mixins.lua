@@ -85,11 +85,16 @@ function MessageRecipient:init(opts)
 end
 
 function MessageRecipient:receiveMessage(message)
-  table.insert(self.messages, message)
+  table.insert(self.messages, {text=message, age=1})
 end
 
-function MessageRecipient:clearMessages()
-  self.messages = {}
+function MessageRecipient:ageMessages()
+  for i, message in ipairs(self.messages) do
+    if message.age > 1 then
+      table.remove(self.messages, i)
+    end
+    message.age = message.age + 1
+  end
 end
 
 Mixins.MessageRecipient = MessageRecipient
@@ -145,7 +150,7 @@ Mixins.PlayerActor = {
   act= function(self)
     refresh()
     engine:lock()
-    self:clearMessages()
+    player:ageMessages()
   end
 }
 

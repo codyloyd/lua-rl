@@ -21,7 +21,6 @@ function love.load()
   charWidth = love.graphics.getFont():getWidth('e')
   charHeight = love.graphics.getFont():getHeight('e')
 
-  frame=ROT.Display(screenWidth, screenHeight + 1, 1, Colors.white,Colors.black,{highdpi=true})
   scheduler=ROT.Scheduler.Speed:new()
   engine=ROT.Engine:new(scheduler)
   engine:start()
@@ -33,6 +32,7 @@ function love.load()
   tiles.Terrain_Objects = loadTileset('./img/Terrain_Objects.json')
   tiles.Monsters = loadTileset('./img/Monsters.json')
   tiles.Avatar = loadTileset('./img/Avatar.json')
+  tiles.Items = loadTileset('./img/Items.json')
   love.window.setMode(screenWidth*tilewidth,screenHeight*tileheight)
 end
 
@@ -40,7 +40,6 @@ function love.update(dt)
 end
 
 function love.draw()
-  frame:draw()
   currentScreen.render(frame)
 end
 
@@ -49,11 +48,7 @@ function love.keypressed(key)
 end
 
 function refresh()
-  frame:clear()
   currentScreen.render(frame)
-  if player then
-    player:clearMessages()
-  end
 end
 
 function switchScreen(screen)
