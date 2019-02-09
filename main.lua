@@ -12,8 +12,8 @@ function love.load()
   playScreen = require('playScreen')
   winScreen = require('winScreen')
   loseScreen = require('loseScreen')
-  screenWidth = 80
-  screenHeight = 28
+  screenWidth = 40
+  screenHeight = 14
   tilewidth = 16
   tileheight = 24
 
@@ -33,14 +33,20 @@ function love.load()
   tiles.Monsters = loadTileset('./img/Monsters.json')
   tiles.Avatar = loadTileset('./img/Avatar.json')
   tiles.Items = loadTileset('./img/Items.json')
-  love.window.setMode(screenWidth*tilewidth,screenHeight*tileheight)
+  love.window.setMode(2*screenWidth*tilewidth,2*screenHeight*tileheight)
+  canvas = love.graphics.newCanvas()
+  canvas:setFilter('nearest', 'nearest')
 end
 
 function love.update(dt)
 end
 
 function love.draw()
+  love.graphics.setCanvas(canvas)
+  love.graphics.clear(Colors.black)
   currentScreen.render(frame)
+  love.graphics.setCanvas()
+  love.graphics.draw(canvas, 0 ,0 ,0, 2)
 end
 
 function love.keypressed(key)

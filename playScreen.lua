@@ -56,7 +56,7 @@ screen.render = function(frame)
 
           local image = tiles[tile.tileset].image
           local quad = tiles[tile.tileset].tiles[id]
-          if x == player.x and y == player.y or level.items[x..','..y] then
+          if x == player.x and y == player.y or level.items[x..','..y] or level.getEntityAt(x,y) then
             --do nothing
           else
             love.graphics.setColor(tile.fg)
@@ -107,17 +107,17 @@ screen.render = function(frame)
 
   -- render player
   love.graphics.setColor(Colors.pureWhite)
-  love.graphics.print('@', (player.x-(topLeftX))*tilewidth, (player.y-(topLeftY))*tileheight,0,1.5)
+  love.graphics.print('@', 4+(player.x-(topLeftX))*tilewidth, (player.y-(topLeftY))*tileheight, 0, 1.5)
 
   --render messages
   for i, message in ipairs(player.messages) do
     love.graphics.setColor(Colors.white)
-    love.graphics.print(message.text, 0, (i-1)*tileheight, 0, 1.5)
+    love.graphics.print(message.text, 0, (i-1)*tileheight)
   end
 
 
   love.graphics.setColor(Colors.white)
-  love.graphics.print(string.format("HP: %d/%d", player.hp, player.maxHp), 0, (screenHeight-1)*tileheight, 0, 1.5)
+  love.graphics.print(string.format("HP: %d/%d", player.hp, player.maxHp), 0, (screenHeight-1)*tileheight)
 
   --render subscreen
   if subscreen then
@@ -192,14 +192,12 @@ screen.keypressed = function(key)
       end
     end
 
-    charWidth = charWidth * 1.5
-    charHeight = charHeight * 1.3
     subscreen = Dialog.new({width=math.max((longestWordLength+4), 15)*charWidth, height=(itemCount + 4)*charHeight})
     function subscreen.renderContent()
       love.graphics.setColor(Colors.white)
-      love.graphics.print('INVENTORY', 3*charWidth, 3*charHeight, 0, 1.5)
+      love.graphics.print('INVENTORY', 3*charWidth, 3*charHeight)
       if itemCount == 0 then
-        love.graphics.print('no items!', 3*charWidth, 4.5*charHeight, 0, 1.5)
+        love.graphics.print('no items!', 3*charWidth, 4.5*charHeight)
         return
       end
 
@@ -211,13 +209,13 @@ screen.keypressed = function(key)
         else
           love.graphics.setColor(item.fg)
         end
-        love.graphics.print(item.char, 3*charWidth, 4*charHeight + charHeight * i, 0, 1.5)
+        love.graphics.print(item.char, 3*charWidth, 4*charHeight + charHeight * i)
         if (i == selectedItem + 1) then
           love.graphics.setColor(Colors.black)
         else
           love.graphics.setColor(Colors.white)
         end
-        love.graphics.print(item.name, 5*charWidth, 4*charHeight + charHeight * i, 0, 1.5)
+        love.graphics.print(item.name, 5*charWidth, 4*charHeight + charHeight * i)
       end
     end
 
