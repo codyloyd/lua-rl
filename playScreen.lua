@@ -193,7 +193,7 @@ screen.keypressed = function(key)
     end
 
     charWidth = charWidth * 1.5
-    charHeight = charHeight * 1
+    charHeight = charHeight * 1.3
     subscreen = Dialog.new({width=math.max((longestWordLength+4), 15)*charWidth, height=(itemCount + 4)*charHeight})
     function subscreen.renderContent()
       love.graphics.setColor(Colors.white)
