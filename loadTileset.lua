@@ -3,8 +3,8 @@ inspect = require('/lib/inspect/inspect')
 
 function loadTileset(jsonFile)
   local tileset = {}
-
-  local data = json.decode(readAll(jsonFile))
+  local contents = love.filesystem.read(jsonFile)
+  local data = json.decode(contents)
 
   tileset.image = love.graphics.newImage('img/'..data.image)
   tileset.tiles = {}

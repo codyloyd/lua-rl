@@ -62,9 +62,26 @@ Entity.randomEntity = function()
 end
 
   -- load items from org file
-local f = csv.open("entities.org", {header=true, separator="|"})
+local fileContents = love.filesystem.read("entities.org")
+local lines = splitString(fileContents, '\n')
+local headers = splitString(lines[1], "|")
+for i,item in ipairs(headers) do
+  headers[i] = item:gsub("%s+", "")
+end
 
-for fields in f:lines() do
+itemsArray = {}
+for i,item in ipairs(lines) do
+  if i > 1 then
+    local newItem = {}
+    local values = splitString(lines[i], "|")
+    for i,value in ipairs(values) do
+      newItem[headers[i]] = value:gsub("%s+", "")
+    end
+    table.insert(itemsArray, newItem)
+  end
+end
+
+for _,fields in ipairs( itemsArray ) do
   if fields.fg then
     fields.fg = Colors[fields.fg]
   end
