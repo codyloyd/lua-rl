@@ -2,6 +2,7 @@ ROT=require './lib/rotLove/src/rot'
 require('colors')
 require('loadTileset')
 inspect = require('/lib/inspect/inspect')
+local moonshine = require 'lib/moonshine'
 
 love.window.setMode(1024,768)
 love.graphics.setDefaultFilter('nearest', 'nearest')

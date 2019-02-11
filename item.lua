@@ -1,7 +1,6 @@
 require('colors')
 require('itemMixins')
 require('glyph')
-local csv = require('lib/lua-csv/lua/csv')
 
 Item = {}
 Item.templates = {}

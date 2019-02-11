@@ -1,7 +1,6 @@
 require('colors')
 require('mixins')
 require('glyph')
-local csv = require('lib/lua-csv/lua/csv')
 
 Entity = {}
 Entity.templates = {}
