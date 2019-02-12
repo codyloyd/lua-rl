@@ -48,3 +48,12 @@ Colors = {
 
   darkPurple = {0.265,0.140,0.203},
 }
+
+function Colors.vary(c, v)
+  variation = tinyRandomNumber(v)
+  return {c[1]+variation,c[2]+variation,c[3]+variation}
+end
+
+function tinyRandomNumber(v)
+  return math.random(v*-1,v)/255
+end

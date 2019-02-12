@@ -8,7 +8,8 @@ function Level.new(opts)
   local self = {}
   self.entities = {}
   self.items = {}
-  self.map = Map.new()
+  self.mapStyle = opts and opts.mapStyle or 'forest'
+  self.map = Map.new({mapStyle=self.mapStyle})
   self.exploredTiles = {}
 
   function self.getEntityAt(x,y) 

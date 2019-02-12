@@ -9,5 +9,21 @@ Glyph.new = function(opts)
   self.bitMaskMap = opts and opts.bitMaskMap or nil
   self.fg = opts and opts.fg or Colors.white
   self.bg = opts and opts.bg or Colors.black
+
+  if type(self.tileid) == 'table' then
+    self.tileid = randomEl(self.tileid)
+  end
+
+  if self.bitMaskMap then
+    for k,v in pairs(self.bitMaskMap) do
+      if type(v) == 'table' then
+        self.bitMaskMap[k] = randomEl(v)
+      end
+    end
+  end
+
+  if opts and opts.varyColor then
+    self.fg = Colors.vary(self.fg, opts.varyColor)
+  end
   return self
 end

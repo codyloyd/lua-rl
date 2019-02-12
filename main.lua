@@ -109,3 +109,9 @@ function splitString(inputstr, sep)
   end
   return t
 end
+
+function randomEl(tb)
+    local keys = {}
+    for k in pairs(tb) do table.insert(keys, k) end
+    return tb[keys[math.random(#keys)]]
+end

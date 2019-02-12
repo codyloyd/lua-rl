@@ -3,11 +3,11 @@ require('level')
 require('entity')
 
 GameWorld = {}
-function GameWorld.new(opts)
+function GameWorld.new()
   local self = {}
   self.levels = {}
   self.currentLevel = 1
-  self.levels[self.currentLevel] = Level.new(opts)
+  self.levels[self.currentLevel] = Level.new({ mapStyle='forest' })
 
   function self:getCurrentLevel()
     return self.levels[self.currentLevel], self.currentLevel
@@ -17,7 +17,9 @@ function GameWorld.new(opts)
     if self.levels[self.currentLevel + 1] then
 
     else
-      self.levels[self.currentLevel+1] = Level.new()
+      local levelStyle = 'dungeon'
+      if (self.currentLevel > 2) then levelStyle = 'cave' end
+      self.levels[self.currentLevel+1] = Level.new({mapStyle=levelStyle})
     end
 
     self.currentLevel = self.currentLevel + 1
