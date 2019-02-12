@@ -34,20 +34,23 @@ function love.load()
   tiles.Monsters = loadTileset('img/Monsters.json')
   tiles.Avatar = loadTileset('img/Avatar.json')
   tiles.Items = loadTileset('img/Items.json')
+
   love.window.setMode(2*screenWidth*tilewidth,2*screenHeight*tileheight)
-  canvas = love.graphics.newCanvas()
-  canvas:setFilter('nearest', 'nearest')
+  mapCanvas = love.graphics.newCanvas()
+  uiCanvas = love.graphics.newCanvas()
+  mapCanvas:setFilter('nearest', 'nearest')
+  uiCanvas:setFilter('nearest', 'nearest')
+
+  effects = moonshine(moonshine.effects.glow)
+  effects.glow.strength = 1.3
+  effects.glow.min_luma = .6
 end
 
 function love.update(dt)
 end
 
 function love.draw()
-  love.graphics.setCanvas(canvas)
-  love.graphics.clear(Colors.black)
   currentScreen.render(frame)
-  love.graphics.setCanvas()
-  love.graphics.draw(canvas, 0 ,0 ,0, 2)
 end
 
 function love.keypressed(key)

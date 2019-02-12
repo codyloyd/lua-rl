@@ -41,6 +41,60 @@ Tile.wallTile = {
   blocksLight=true
 }
 
+Tile.rockTile = {
+  name='rockTile',
+  char='#',
+  tileset='Terrain',
+  tileid=120,
+  bitMaskMap = {
+    [0]=124,
+    [1]=120,
+    [2]=120,
+    [3]=120,
+    [4]=120,
+    [5]=120,
+    [6]=120,
+    [7]=120,
+    [8]= 96,
+    [9]= 96,
+    [10]=96,
+    [11]=96,
+    [12]=96,
+    [13]=96,
+    [14]=96,
+    [15]=96
+  },
+  fg=Colors.darkBrown,
+  blocksLight=true
+}
+
+Tile.treeTile = {
+  name='treeTile',
+  char='#',
+  tileset='Terrain_Objects',
+  tileid=124,
+  bitMaskMap = {
+    [0]=124,
+    [1]=124,
+    [2]=124,
+    [3]=124,
+    [4]=124,
+    [5]=124,
+    [6]=124,
+    [7]=124,
+    [8]=124,
+    [9]=124,
+    [10]=124,
+    [11]=124,
+    [12]=124,
+    [13]=124,
+    [14]=124,
+    [15]=124
+  },
+  fg=Colors.lightGray,
+  blocksLight=true
+}
+
 Tile.floorTile = {
   name='floorTile',
   char='.',

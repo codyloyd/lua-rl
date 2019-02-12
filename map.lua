@@ -29,15 +29,45 @@ Map.new = function(opts)
     end
   end
 
+  --roomsncorridors
   -- generate map data
-  local gen = ROT.Map.Brogue:new(mapWidth,mapHeight)
-  gen:create(function (x,y,val)
+  -- local gen = ROT.Map.Brogue:new(mapWidth,mapHeight)
+  -- gen:create(function (x,y,val)
+  --   if val == 0 then
+  --     self.tiles[x][y] = Tile.new(Tile.floorTile)
+  --   elseif val == 1 then
+  --     self.tiles[x][y] = Tile.new(Tile.wallTile)
+  --   end
+  -- end)
+
+  -- forest
+  local gen = ROT.Map.Cellular:new(mapWidth,mapHeight,{
+    connected=true,
+    born={6,7,8},
+    survive={2,3,4,5}
+  })
+  gen:randomize(.5)
+  gen:create(function(x,y,val)
     if val == 0 then
       self.tiles[x][y] = Tile.new(Tile.floorTile)
     elseif val == 1 then
-      self.tiles[x][y] = Tile.new(Tile.wallTile)
+      self.tiles[x][y] = Tile.new(Tile.treeTile)
     end
   end)
+
+    --cave
+  -- local gen = ROT.Map.Cellular:new(mapWidth,mapHeight,{
+  --   connected=true,
+  --   topology=8
+  -- })
+  -- gen:randomize(.4)
+  -- gen:create(function(x,y,val)
+  --   if val == 0 then
+  --     self.tiles[x][y] = Tile.new(Tile.floorTile)
+  --   elseif val == 1 then
+  --     self.tiles[x][y] = Tile.new(Tile.rockTile)
+  --   end
+  -- end)
 
   --do bitmasking
   for x,row in pairs(self.tiles) do

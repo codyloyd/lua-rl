@@ -18,7 +18,9 @@ end
 screen.exit = function()
 end
 
-screen.render = function(frame)
+screen.render = function()
+  love.graphics.setCanvas(mapCanvas)
+  love.graphics.clear(Colors.black)
   local level = gameWorld:getCurrentLevel()
   local map = gameWorld:getCurrentLevel().map
   --generate FOV data
@@ -71,7 +73,7 @@ screen.render = function(frame)
 
         local image = tiles[tile.tileset].image
         local quad = tiles[tile.tileset].tiles[id]
-        love.graphics.setColor(Colors.darkBlue)
+        love.graphics.setColor(Colors.lightBlack)
         love.graphics.draw(image, quad, (x-(topLeftX))*tilewidth,(y-(topLeftY))*tileheight)
       end
     end
@@ -108,20 +110,43 @@ screen.render = function(frame)
   -- render player
   love.graphics.setColor(Colors.pureWhite)
   love.graphics.print('@', 4+(player.x-(topLeftX))*tilewidth, (player.y-(topLeftY))*tileheight, 0, 1.5)
+  love.graphics.setCanvas()
 
-  --render messages
-  for i, message in ipairs(player.messages) do
-    love.graphics.setColor(Colors.white)
-    love.graphics.print(message.text, 0, (i-1)*tileheight)
-  end
-
-
-  love.graphics.setColor(Colors.white)
-  love.graphics.print(string.format("HP: %d/%d", player.hp, player.maxHp), 0, (screenHeight-1)*tileheight)
 
   --render subscreen
+
+
+  function getHealthColor(hp, maxHp)
+    percentage = hp/maxHp
+    if percentage > .6 then
+      return Colors.lightGray
+    else
+      return Colors.red
+    end
+  end
+
+  love.graphics.setCanvas(uiCanvas)
+    love.graphics.setColor(Colors.black)
+    love.graphics.rectangle('fill',0,0,170, 22)
+    love.graphics.setColor(getHealthColor(player.hp, player.maxHp))
+    love.graphics.print('HEALTH:', 0, 0)
+    love.graphics.setColor(Colors.white)
+    love.graphics.rectangle('fill', 60, 0, 104, 16)
+    love.graphics.setColor(getHealthColor(player.hp, player.maxHp))
+    local healthBarWidth = 60 * (player.hp/player.maxHp)
+    love.graphics.rectangle('fill', 62, 2, healthBarWidth, 12)
+  love.graphics.setCanvas()
+
+  love.graphics.setColor(Colors.pureWhite)
+  effects(function()
+    love.graphics.draw(mapCanvas, 0,0,0,2)
+  end)
+
   if subscreen then
+    love.graphics.setColor(Colors.pureWhite)
     subscreen:render()
+  else
+    love.graphics.draw(uiCanvas, charWidth,charHeight,0,2)
   end
 end
 
@@ -195,37 +220,43 @@ screen.keypressed = function(key)
     subscreen = Dialog.new({width=math.max((longestWordLength+4), 15)*charWidth, height=(itemCount + 4)*charHeight})
     function subscreen.renderContent()
       love.graphics.setColor(Colors.white)
-      love.graphics.print('INVENTORY', 3*charWidth, 3*charHeight)
+      love.graphics.print('INVENTORY', 0, 0)
       if itemCount == 0 then
-        love.graphics.print('no items!', 3*charWidth, 4.5*charHeight)
+        love.graphics.print('no items!', 0, 1.5*charHeight)
         return
       end
 
-      love.graphics.setColor(Colors.white)
-      love.graphics.rectangle('fill',3*charWidth-2, 4*charHeight + charHeight * (selectedItem+1), (longestWordLength+2)*charWidth+6, charHeight)
       for i, item in ipairs(items) do
+        --draw line highlight
+        if (i == selectedItem + 1) then
+          love.graphics.setColor(Colors.white)
+        else
+          love.graphics.setColor(Colors.black)
+        end
+        love.graphics.rectangle('fill',2, charHeight + charHeight * (i), (longestWordLength)*charWidth+2*charWidth, charHeight)
+
+        --draw symbol
         if (i == selectedItem + 1) then
           love.graphics.setColor(Colors.black)
         else
           love.graphics.setColor(item.fg)
         end
-        love.graphics.print(item.char, 3*charWidth, 4*charHeight + charHeight * i)
+        love.graphics.print(item.char, 4, charHeight + charHeight * i)
+        --draw text
         if (i == selectedItem + 1) then
           love.graphics.setColor(Colors.black)
         else
           love.graphics.setColor(Colors.white)
         end
-        love.graphics.print(item.name, 5*charWidth, 4*charHeight + charHeight * i)
+        love.graphics.print(item.name, 2*charWidth, charHeight + charHeight * i)
       end
     end
 
     function subscreen:keypressed(key)
       if key == 'j' or key=='down' then
         selectedItem = (selectedItem + 1) % itemCount
-        subscreen:render()
       elseif key=='k' or key=='up' then
         selectedItem = (selectedItem - 1) % itemCount
-        subscreen:render()
       elseif key=='return' then
         --should _use_ item before removing it lol
         local item = items[selectedItem + 1]
@@ -233,6 +264,8 @@ screen.keypressed = function(key)
           item:apply()
         end
         table.remove(player.inventory, selectedItem + 1)
+        itemCount = itemCount - 1
+        subscreen.clear = true
       end
     end
   end
