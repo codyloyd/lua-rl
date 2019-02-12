@@ -119,22 +119,25 @@ screen.render = function()
   function getHealthColor(hp, maxHp)
     percentage = hp/maxHp
     if percentage > .6 then
-      return Colors.lightGray
+      return Colors.white
     else
       return Colors.red
     end
   end
 
   love.graphics.setCanvas(uiCanvas)
-    love.graphics.setColor(Colors.black)
-    love.graphics.rectangle('fill',0,0,170, 22)
+    love.graphics.clear()
     love.graphics.setColor(getHealthColor(player.hp, player.maxHp))
-    love.graphics.print('HEALTH:', 0, 0)
-    love.graphics.setColor(Colors.white)
-    love.graphics.rectangle('fill', 60, 0, 104, 16)
+    love.graphics.print('HEALTH:', 2, 2)
+
+    love.graphics.setColor(Colors.gray)
+    love.graphics.rectangle('fill', 60, 2, 100, 12)
+
     love.graphics.setColor(getHealthColor(player.hp, player.maxHp))
-    local healthBarWidth = 60 * (player.hp/player.maxHp)
-    love.graphics.rectangle('fill', 62, 2, healthBarWidth, 12)
+    local healthBarWidth = 100 * (player.hp/player.maxHp)
+    love.graphics.rectangle('fill', 60, 2, healthBarWidth, 12)
+
+
   love.graphics.setCanvas()
 
   love.graphics.setColor(Colors.pureWhite)
@@ -146,7 +149,8 @@ screen.render = function()
     love.graphics.setColor(Colors.pureWhite)
     subscreen:render()
   else
-    love.graphics.draw(uiCanvas, charWidth,charHeight,0,2)
+    love.graphics.setColor(Colors.pureWhite)
+    love.graphics.draw(uiCanvas, charWidth,charHeight,0,1)
   end
 end
 
