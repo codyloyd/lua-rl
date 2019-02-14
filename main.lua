@@ -1,6 +1,8 @@
 ROT=require './lib/rotLove/src/rot'
 require('colors')
 require('loadTileset')
+require('/lib/gooi')
+Luvent = require('/lib/Luvent/src/Luvent')
 inspect = require('/lib/inspect/inspect')
 local moonshine = require 'lib/moonshine'
 
@@ -8,6 +10,8 @@ love.window.setMode(1024,768)
 love.graphics.setDefaultFilter('nearest', 'nearest')
 
 function love.load()
+  function width() return love.graphics.getWidth() end
+  function height() return love.graphics.getHeight() end
   love.keyboard.setKeyRepeat(true)
   startScreen = require('startScreen')
   playScreen = require('playScreen')
@@ -40,6 +44,18 @@ function love.load()
   uiCanvas = love.graphics.newCanvas()
   mapCanvas:setFilter('nearest', 'nearest')
   uiCanvas:setFilter('nearest', 'nearest')
+  --GOOI stuff
+  style = {
+    font=font,
+    radius = 0,
+    innerRadius = 0,
+    showBorder = true,
+    bgColor = {0.208, 0.220, 0.222}
+  }
+  gooi.setStyle(style)
+  gooi.desktopMode()
+
+  gooi.shadow()
 
   effects = moonshine(moonshine.effects.glow)
   effects.glow.strength = 1.3
@@ -47,6 +63,7 @@ function love.load()
 end
 
 function love.update(dt)
+    gooi.update(dt)
 end
 
 function love.draw()

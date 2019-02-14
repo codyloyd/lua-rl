@@ -38,6 +38,9 @@ end
 
 function Mixins.Destructible:takeDamage(attacker, damage)
   self.hp = self.hp - damage
+  if self == player then
+    updateUi:trigger('healthBar', self.hp/self.maxHp)
+  end
   if self.hp <= 0 then
     sendMessage(attacker, string.format('You kill the %s!', self.name))
     sendMessage(self, string.format('You die at the hands of the %s!', attacker.name))

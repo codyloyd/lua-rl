@@ -13,6 +13,29 @@ player = nil
 screen.enter = function()
   gameWorld = GameWorld.new()
   player = gameWorld.player
+
+  uiElements = {}
+  uiElements.healthBar = gooi.newBar({value=1}):bg(Colors.black):fg(Colors.white)
+  uiElements.magicBar = gooi.newBar({value=1}):bg(Colors.black):fg(Colors.white)
+
+  updateUi = Luvent.newEvent()
+  updateUi:addAction(
+    function(uiElement, payload)
+      uiElements[uiElement].value = payload
+    end
+  )
+
+  topLeft = gooi.newPanel({x=0,y=0,w = 300, h = 60, layout="grid 3x3"})
+  topLeft
+  :setColspan(1,2,2)
+  :setColspan(2,2,2)
+  :setColspan(3,2,2)
+  :add(
+      gooi.newLabel({text='Health'}):left():fg(Colors.white),
+      uiElements.healthBar,
+      gooi.newLabel({text='MAGIC'}):left():fg(Colors.white),
+      uiElements.magicBar
+  )
 end
 
 screen.exit = function()
@@ -125,33 +148,18 @@ screen.render = function()
     end
   end
 
-  love.graphics.setCanvas(uiCanvas)
-    love.graphics.clear()
-    love.graphics.setColor(getHealthColor(player.hp, player.maxHp))
-    love.graphics.print('HEALTH:', 2, 2)
-
-    love.graphics.setColor(Colors.gray)
-    love.graphics.rectangle('fill', 60, 2, 100, 12)
-
-    love.graphics.setColor(getHealthColor(player.hp, player.maxHp))
-    local healthBarWidth = 100 * (player.hp/player.maxHp)
-    love.graphics.rectangle('fill', 60, 2, healthBarWidth, 12)
-
-
-  love.graphics.setCanvas()
 
   love.graphics.setColor(Colors.pureWhite)
-  effects(function()
+  -- effects(function()
     love.graphics.draw(mapCanvas, 0,0,0,2)
-  end)
+  -- end)
 
   if subscreen then
     love.graphics.setColor(Colors.pureWhite)
     subscreen:render()
-  else
-    love.graphics.setColor(Colors.pureWhite)
-    love.graphics.draw(uiCanvas, charWidth,charHeight,0,1)
   end
+
+  gooi.draw()
 end
 
 screen.keypressed = function(key)
