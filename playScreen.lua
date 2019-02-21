@@ -22,6 +22,9 @@ screen.enter = function()
   updateUi:addAction(
     function(uiElement, payload)
       uiElements[uiElement].value = payload
+      if uiElement == 'healthBar' and payload < .6 then
+        uiElements[uiElement]:fg(Colors.red)
+      end
     end
   )
 
@@ -35,7 +38,7 @@ screen.enter = function()
       uiElements.healthBar,
       gooi.newLabel({text='MAGIC'}):left():fg(Colors.white),
       uiElements.magicBar
-  )
+  ):setGroup('ui')
 end
 
 screen.exit = function()
@@ -157,9 +160,10 @@ screen.render = function()
   if subscreen then
     love.graphics.setColor(Colors.pureWhite)
     subscreen:render()
+  else
+    gooi.draw('ui')
   end
 
-  gooi.draw()
 end
 
 screen.keypressed = function(key)
@@ -216,70 +220,7 @@ screen.keypressed = function(key)
       gameWorld:getCurrentLevel().removeItem(item)
     end
   elseif key=='i' then
-    -- view inventory
-    local items = player.inventory
-    local selectedItem = 0
-    local longestWordLength = 0
-    local itemCount = 0
-
-    for _, item in pairs(items) do
-      itemCount = itemCount + 1
-      if string.len(item.name) > longestWordLength then
-        longestWordLength = string.len(item.name)
-      end
-    end
-
-    subscreen = Dialog.new({width=math.max((longestWordLength+4), 15)*charWidth, height=(itemCount + 4)*charHeight})
-    function subscreen.renderContent()
-      love.graphics.setColor(Colors.white)
-      love.graphics.print('INVENTORY', 0, 0)
-      if itemCount == 0 then
-        love.graphics.print('no items!', 0, 1.5*charHeight)
-        return
-      end
-
-      for i, item in ipairs(items) do
-        --draw line highlight
-        if (i == selectedItem + 1) then
-          love.graphics.setColor(Colors.white)
-        else
-          love.graphics.setColor(Colors.black)
-        end
-        love.graphics.rectangle('fill',2, charHeight + charHeight * (i), (longestWordLength)*charWidth+2*charWidth, charHeight)
-
-        --draw symbol
-        if (i == selectedItem + 1) then
-          love.graphics.setColor(Colors.black)
-        else
-          love.graphics.setColor(item.fg)
-        end
-        love.graphics.print(item.char, 4, charHeight + charHeight * i)
-        --draw text
-        if (i == selectedItem + 1) then
-          love.graphics.setColor(Colors.black)
-        else
-          love.graphics.setColor(Colors.white)
-        end
-        love.graphics.print(item.name, 2*charWidth, charHeight + charHeight * i)
-      end
-    end
-
-    function subscreen:keypressed(key)
-      if key == 'j' or key=='down' then
-        selectedItem = (selectedItem + 1) % itemCount
-      elseif key=='k' or key=='up' then
-        selectedItem = (selectedItem - 1) % itemCount
-      elseif key=='return' then
-        --should _use_ item before removing it lol
-        local item = items[selectedItem + 1]
-        if item and item.apply then
-          item:apply()
-        end
-        table.remove(player.inventory, selectedItem + 1)
-        itemCount = itemCount - 1
-        subscreen.clear = true
-      end
-    end
+    print('inventory lol')
   end
 end
 

@@ -106,12 +106,12 @@ function Level.new(opts)
   --   local entity = Entity.new(Entity.BatTemplate)
   --   self.addEntityAtRandomPosition(entity)
   -- end
-  for i=1,17 do
-    local entity = Entity.new(Entity.randomEntity())
-    self.addEntityAtRandomPosition(entity)
-  end
+  -- for i=1,17 do
+  --   local entity = Entity.new(Entity.randomEntity())
+  --   self.addEntityAtRandomPosition(entity)
+  -- end
     -- add Items
-  for i=1, 19 do
+  for i=1, 59 do
     local item = Item.new(Item.randomItem())
     self.addItemAtRandomPosition(item)
   end

@@ -74,6 +74,9 @@ function love.keypressed(key)
   currentScreen.keypressed(key)
 end
 
+function love.mousepressed(x, y, button)  gooi.pressed() end
+function love.mousereleased(x, y, button) gooi.released() end
+
 function refresh()
   currentScreen.render(frame)
 end
