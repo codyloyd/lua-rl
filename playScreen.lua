@@ -14,19 +14,10 @@ screen.enter = function()
   gameWorld = GameWorld.new()
   player = gameWorld.player
 
+  -- set up game UI elements
   uiElements = {}
   uiElements.healthBar = gooi.newBar({value=1}):bg(Colors.black):fg(Colors.white)
   uiElements.magicBar = gooi.newBar({value=1}):bg(Colors.black):fg(Colors.white)
-
-  updateUi = Luvent.newEvent()
-  updateUi:addAction(
-    function(uiElement, payload)
-      uiElements[uiElement].value = payload
-      if uiElement == 'healthBar' and payload < .6 then
-        uiElements[uiElement]:fg(Colors.red)
-      end
-    end
-  )
 
   topLeft = gooi.newPanel({x=0,y=0,w = 300, h = 60, layout="grid 3x3"})
   topLeft
@@ -39,6 +30,26 @@ screen.enter = function()
       gooi.newLabel({text='MAGIC'}):left():fg(Colors.white),
       uiElements.magicBar
   ):setGroup('ui')
+
+  -- event for updating the UI
+  updateUi = Luvent.newEvent()
+  updateUi:addAction(
+    function(uiElement, payload)
+      uiElements[uiElement].value = payload
+      if uiElement == 'healthBar' and payload < .6 then
+        uiElements[uiElement]:fg(Colors.red)
+      end
+    end
+  )
+
+  local map = gameWorld:getCurrentLevel().map
+  fov = ROT.FOV.Precise:new(function(fov,x,y)
+    if map.getTile(x,y) and map.getTile(x,y).blocksLight then
+      return false
+    end
+    return true
+  end)
+
 end
 
 screen.exit = function()
@@ -49,16 +60,10 @@ screen.render = function()
   love.graphics.clear(Colors.black)
   local level = gameWorld:getCurrentLevel()
   local map = gameWorld:getCurrentLevel().map
+
   --generate FOV data
   local visibleTiles = {}
   local exploredTiles = level.exploredTiles
-
-  fov = ROT.FOV.Precise:new(function(fov,x,y)
-    if map.getTile(x,y) and map.getTile(x,y).blocksLight then
-      return false
-    end
-    return true
-  end)
 
   fov:compute(player.x, player.y, 10, function(x,y,r,v)
     local key  =x..','..y
@@ -67,14 +72,18 @@ screen.render = function()
   end)
 
   -- render map
-  topLeftX = math.max(1, player.x - (screenWidth / 2))
-  topLeftX = math.min(topLeftX, mapWidth - screenWidth)
-  topLeftY = math.max(1, player.y - (screenHeight / 2))
-  topLeftY = math.min(topLeftY, mapHeight - screenHeight)
+  -- get bounds of our visible map by centering on the player
+  local topLeftX = math.max(1, player.x - (screenWidth / 2))
+  local topLeftX = math.min(topLeftX, mapWidth - screenWidth)
+  local topLeftY = math.max(1, player.y - (screenHeight / 2))
+  local topLeftY = math.min(topLeftY, mapHeight - screenHeight)
+
+  -- only render things that are actually on the screen
   for x=topLeftX, topLeftX - 1 + screenWidth do
     for y=topLeftY, topLeftY - 1 + screenHeight do
       local tile = map.getTile(x,y)
       local key = x..','..y
+      -- only render things if the FOV system says they're visible
       if visibleTiles[key] and tile then
         if tile then
           local id = tile.tileid
@@ -85,12 +94,13 @@ screen.render = function()
           local image = tiles[tile.tileset].image
           local quad = tiles[tile.tileset].tiles[id]
           if x == player.x and y == player.y or level.items[x..','..y] or level.getEntityAt(x,y) then
-            --do nothing
+            -- if there's an item or the player on this tile, don't draw it
           else
             love.graphics.setColor(tile.fg)
             love.graphics.draw(image, quad, (x-(topLeftX))*tilewidth,(y-(topLeftY))*tileheight)
           end
         end
+      -- render map tiles that have been explored already
       elseif exploredTiles[key] then
         local id = tile.tileid
         if tile.bitMaskMap and tile.bitMask then
@@ -157,6 +167,7 @@ screen.render = function()
     love.graphics.draw(mapCanvas, 0,0,0,2)
   -- end)
 
+  -- if there is a subscreen, do not draw UI stuff
   if subscreen then
     love.graphics.setColor(Colors.pureWhite)
     subscreen:render()
@@ -220,6 +231,7 @@ screen.keypressed = function(key)
       gameWorld:getCurrentLevel().removeItem(item)
     end
   elseif key=='i' then
+    -- render item list screen
     subscreen = {}
     local myGrid = grid({
         x=0,

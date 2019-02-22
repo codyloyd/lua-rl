@@ -4,6 +4,7 @@ require('loadTileset')
 require('/lib/gooi')
 Luvent = require('/lib/Luvent/src/Luvent')
 inspect = require('/lib/inspect/inspect')
+lume = require('/lib/lume')
 local moonshine = require 'lib/moonshine'
 
 love.window.setMode(1024,768)
@@ -128,17 +129,4 @@ function splitString(inputstr, sep)
     i = i + 1
   end
   return t
-end
-
-function randomEl(tb)
-    local keys = {}
-    for k in pairs(tb) do table.insert(keys, k) end
-    return tb[keys[math.random(#keys)]]
-end
-
-function unpack(t, i)
-  i = i or 1
-  if t[i] ~= nil then
-    return t[i], unpack(t, i + 1)
-  end
 end

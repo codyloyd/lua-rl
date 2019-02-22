@@ -11,13 +11,13 @@ Glyph.new = function(opts)
   self.bg = opts and opts.bg or Colors.black
 
   if type(self.tileid) == 'table' then
-    self.tileid = randomEl(self.tileid)
+    self.tileid = lume.randomchoice(self.tileid)
   end
 
   if self.bitMaskMap then
     for k,v in pairs(self.bitMaskMap) do
       if type(v) == 'table' then
-        self.bitMaskMap[k] = randomEl(v)
+        self.bitMaskMap[k] = lume.randomchoice(v)
       end
     end
   end
@@ -25,5 +25,6 @@ Glyph.new = function(opts)
   if opts and opts.varyColor then
     self.fg = Colors.vary(self.fg, opts.varyColor)
   end
+
   return self
 end
