@@ -57,3 +57,7 @@ end
 function tinyRandomNumber(v)
   return math.random(v*-1,v)/255
 end
+
+function Colors.addAlpha(c, a)
+  return {c[1],c[2],c[3],a}
+end

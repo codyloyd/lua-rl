@@ -9,7 +9,7 @@ end
 
 screen.render = function(frame)
   love.graphics.setColor(Colors.red)
-  love.graphics.print('YOU WIN', 16,24,0,2)
+  love.graphics.print('YOU WIN', 16,24,0,3)
 end
 
 screen.keypressed = function(key)

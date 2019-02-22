@@ -3,7 +3,7 @@ require('gameWorld')
 require('tile')
 require('entity')
 require('colors')
-require('dialog')
+local grid = require('lib/grid')
 
 local screen = {}
 local gameWorld
@@ -169,7 +169,7 @@ end
 screen.keypressed = function(key)
   --render subscreen keypress highjacks keypress function
   if subscreen then
-    subscreen:keypressed(key)
+    subscreen.keypressed(key)
     if key=='escape' then
       subscreen = nil
       refresh()
@@ -220,7 +220,59 @@ screen.keypressed = function(key)
       gameWorld:getCurrentLevel().removeItem(item)
     end
   elseif key=='i' then
-    print('inventory lol')
+    subscreen = {}
+    local myGrid = grid({
+        x=0,
+        y=0,
+        w=love.graphics.getWidth(),
+        h=love.graphics.getHeight(),
+        rows=1,
+        cols=8,
+        margin = 8
+    })
+    local selectedItem = 0
+    local listPane = myGrid.createCell({row=0, col=0, colSpan=2, padding=12})
+    local listGrid = grid({x=listPane.x,y=listPane.y,h=listPane.h,w=listPane.w,rows=26})
+    local listItem = listGrid.createCell({padding=12})
+    local detailsPane = myGrid.createCell({row=0, col=2, colSpan=6, padding=12})
+    function subscreen.render()
+      love.graphics.setLineWidth(2)
+      love.graphics.setColor(Colors.white)
+      -- love.graphics.rectangle('line', listPane.getBorderBox())
+      -- love.graphics.rectangle('line', detailsPane.getBorderBox())
+      local fontHeight = love.graphics.getFont():getHeight()
+
+      for i,item in ipairs(player.inventory) do
+        local x,y,w,h = listItem.getBorderBox()
+        love.graphics.setColor(Colors.addAlpha(Colors.black, .8))
+        love.graphics.rectangle("fill", x, y  + (h*(i-1)), w, h)
+
+        love.graphics.setColor(Colors.white)
+        love.graphics.rectangle("line", x, y  + (h*(i-1)), w, h)
+        if selectedItem + 1 == i then
+          love.graphics.rectangle("fill", x, y  + (h*(i-1)), w, h)
+          love.graphics.setColor(Colors.black)
+        end
+        local xx,yy,ww,hh = listItem.getContentBox()
+        love.graphics.printf(item.name, xx, y + (h*(i-1)) + (h/2 - fontHeight/2),ww)
+      end
+    end
+
+    function subscreen.keypressed(key)
+      if key == 'j' or key == 'down' then
+        selectedItem = (selectedItem + 1) % #player.inventory
+      end
+      if key == 'k' or key == 'up' then
+        selectedItem = (selectedItem - 1) % #player.inventory
+      end
+      if key == 'return' then
+        local item = player.inventory[selectedItem + 1]
+        if item.apply then
+          item:apply()
+        end
+        table.remove(player.inventory, selectedItem+1)
+      end
+    end
   end
 end
 
