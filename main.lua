@@ -41,6 +41,7 @@ function love.load()
   tiles.Items = loadTileset('img/Items.json')
 
   love.window.setMode(2*screenWidth*tilewidth,2*screenHeight*tileheight)
+
   mapCanvas = love.graphics.newCanvas()
   uiCanvas = love.graphics.newCanvas()
   mapCanvas:setFilter('nearest', 'nearest')
@@ -72,6 +73,7 @@ function love.draw()
 end
 
 function love.keypressed(key)
+  if key=='z'then love.quit() end
   currentScreen.keypressed(key)
 end
 
